@@ -1,0 +1,350 @@
+.main-header {
+  padding: 30px 0;
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  top: 0;
+  left: 0;
+}
+
+.main-header__wrapper {
+  display: flex;
+  // flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.main-header__logo {
+  margin-right: 20px;
+  transition: all $trans-default;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:disabled {
+    opacity: 0.1;
+
+    pointer-events: none;
+  }
+}
+
+.main-header__logo img {
+  flex-shrink: 0;
+}
+
+.main-header__nav {
+  margin-left: 20px;
+}
+
+.main-header__button {
+  display: grid;
+  grid-template-columns: min-content 46px;
+  gap: 20px;
+  padding: 4px 4px 4px 20px;
+
+  color: $color-cerulean-blue;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+
+  background-color: $color-default-white;
+  border: none;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 1px $color-cerulean-blue;
+  border-radius: 30px;
+
+
+  transition: all $trans-default;
+  margin: 0 0 4px auto;
+
+  &:hover,
+  &:focus {
+    background-color: $color-cerulean-blue;
+    color: $color-default-white;
+
+    .main-header__burger {
+      background-color: $color-default-white;
+    }
+
+    svg {
+      color: $color-cerulean-blue;
+    }
+  }
+
+  &:active {
+    background-color: $color-cerulean-blue;
+    color: rgba($color-default-white, 0.7);
+
+    .main-header__burger {
+      background-color: $color-default-white;
+    }
+
+    svg {
+      color: rgba($color-cerulean-blue, 0.7);
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: $color-transparent;
+    color: $color-mischka;
+    box-shadow: inset 0 0 0 1px $color-mischka;
+
+    pointer-events: none;
+
+    .main-header__burger {
+      background-color: $color-mischka;
+    }
+
+    svg {
+      color: rgba($color-default-white, 0.6);
+    }
+  }
+
+  .is-open & {
+    background-color: $color-cerulean-blue;
+    color: $color-default-white;
+    gap: 172px;
+
+    &:hover,
+    &:focus {
+      background-color: $color-default-white;
+      color: $color-cerulean-blue;
+
+      .main-header__burger {
+        background-color: $color-cerulean-blue;
+      }
+
+      svg {
+        color: $color-default-white;
+      }
+    }
+
+    &:active {
+      background-color: $color-default-white;
+      color: rgba($color-cerulean-blue, 0.7);
+
+      .main-header__burger {
+        background-color: $color-cerulean-blue;
+      }
+
+      svg {
+        color: rgba($color-default-white, 0.7);
+      }
+    }
+  }
+}
+
+.main-header__button span {
+  display: block;
+  margin-top: 16px;
+}
+
+.main-header__burger {
+  width: 46px;
+  height: 46px;
+  background-color: $color-cerulean-blue;
+  border-radius: 50%;
+
+  position: relative;
+
+  padding: 5px;
+  transition: all $trans-default;
+
+  // cursor: pointer;
+
+  // user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .is-open & {
+    background-color: $color-default-white;
+  }
+}
+
+.main-header__button-open {
+  display: block;
+  flex-shrink: 0;
+
+  transition: all $trans-default;
+
+  // user-select: none;
+
+  color: $color-default-white;
+
+  .is-open & {
+    display: none;
+  }
+}
+
+.main-header__button-close {
+  display: none;
+
+  transition: all $trans-default;
+
+  // user-select: none;
+
+  color: $color-cerulean-blue;
+
+  .is-open & {
+    display: block;
+  }
+}
+
+.main-header__nav-list {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+
+  background-color: $color-cerulean-blue;
+  color: rgba($color-default-white, 0.7);
+  border-radius: 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  transition: all $trans-default;
+  max-height: 0;
+  transform: scaleY(0);
+  transform-origin: top right;
+
+  .is-open & {
+    transform: scaleY(1);
+    max-height: 100%;
+    padding: 35px 25px;
+  }
+}
+
+.main-header__link {
+  display: inline-flex;
+  color: rgba($color-default-white, 0.7);
+  text-transform: uppercase;
+  transition: all $trans-default;
+
+  &:hover,
+  &:focus {
+    color: $color-default-white;
+  }
+
+  &:active {
+    color: $color-default-white;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:disabled {
+    color: $color-mischka;
+
+    pointer-events: none;
+  }
+}
+
+.main-header__nav-button {
+  display: grid;
+  grid-template-columns: min-content 12px;
+  gap: 10px;
+  padding: 0;
+  border: none;
+  background-color: $color-transparent;
+  color: rgba($color-default-white, 0.7);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all $trans-default;
+
+  &:hover,
+  &:focus {
+    color: $color-default-white;
+  }
+
+  &:active {
+    color: $color-default-white;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:disabled {
+    color: $color-mischka;
+
+    pointer-events: none;
+  }
+
+  &.is-active {
+    color: $color-default-white;
+  }
+}
+
+.main-header__nav-image {
+  display: flex;
+  align-items: flex-start;
+}
+
+.main-header__nav-image svg {
+  margin-top: 4px;
+  transition: all $trans-default;
+
+  .is-active & {
+    transform: scaleY(-1);
+  }
+}
+
+.main-header__nav-submenu {
+  margin: 0;
+  padding: 0 0 0 16px;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  transition: all $trans-default;
+  visibility: hidden;
+
+  .is-active & {
+    margin-top: 20px;
+    visibility: visible;
+  }
+}
+
+.main-header__nav-link {
+  color: rgba($color-default-white, 0.6);
+  transition: all $trans-default;
+
+  &:hover,
+  &:focus {
+    color: $color-default-white;
+  }
+
+  &:active {
+    color: $color-default-white;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:disabled {
+    color: $color-mischka;
+
+    pointer-events: none;
+  }
+}
+
+
+
+
+
