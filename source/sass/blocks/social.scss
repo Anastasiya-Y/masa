@@ -1,0 +1,64 @@
+.social__list {
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+
+  @include vp-1199 {
+    gap: 10px;
+  }
+}
+
+.social__link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  padding: 5px;
+  border-radius: 50%;
+
+  background-color: $color-cerulean-blue;
+  color: $color-default-white;
+
+  transition: all $trans-default;
+
+  user-select: none;
+
+  &:hover,
+  &:focus {
+    color: rgba($color-default-white, 0.7);
+  }
+
+  &:active {
+    background-color: $color-endeavour;
+    color: $color-default-white;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    background-color: $color-mischka;
+    color: rgba($color-default-white, 0.6);
+  }
+
+  @include vp-767 {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.social__link svg {
+  transition: all $trans-default;
+
+  @include vp-767 {
+    width: 12px;
+    height: 12px;
+  }
+}
