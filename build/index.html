@@ -19,9 +19,9 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="main-header" data-header>
+      <header class="main-header" data-header data-close-menu>
         <div class="container">
-          <div class="main-header__wrapper">
+          <div class="main-header__wrapper" data-close-menu>
             <a class="main-header__logo" href="index.html" aria-label="Переход на главную страницу сайта проекта Masa.">
               <img src="img/svg/logo.svg" width="52" height="52" alt="Логотип сайта проекта Masa.">
             </a>
@@ -37,71 +37,73 @@
                   </svg>
                 </div>
               </button>
-              <ul class="main-header__nav-list" data-accordion="parent">
-                <li class="main-header__nav-item">
-                  <a class="main-header__link" href="#" data-close-menu>О&nbsp;проекте</a>
-                </li>
-                <li class="main-header__nav-item" data-accordion="element">
-                  <button class="main-header__nav-button" type="button" aria-label="Открыть доступные программы/Закрыть доступные программы." data-accordion="button">
-                    <span>Программы</span>
-                    <div class="main-header__nav-image">
-                      <svg width="12" height="12">
-                        <use href="img/sprite.svg#icon-arrow"></use>
-                      </svg>
-                    </div>
-                  </button>
-                  <ul class="main-header__nav-submenu" data-accordion="content">
-                    <li class="main-header__nav-subitem">
-                      <a class="main-header__nav-link" href="#" data-close-menu>Стажировки</a>
-                    </li>
-                    <li class="main-header__nav-subitem">
-                      <a class="main-header__nav-link" href="#" data-close-menu>Волонтёрство</a>
-                    </li>
-                    <li class="main-header__nav-subitem">
-                      <a class="main-header__nav-link" href="#" data-close-menu>Учеба</a>
-                    </li>
-                    <li class="main-header__nav-subitem">
-                      <a class="main-header__nav-link" href="#" data-close-menu>Религия</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="main-header__nav-item">
-                  <a class="main-header__link" href="#" data-close-menu>Как&nbsp;поехать</a>
-                </li>
-                <li class="main-header__nav-item">
-                  <a class="main-header__link" href="#" data-close-menu>Отзывы</a>
-                </li>
-                <li class="main-header__nav-item" data-accordion="element">
-                  <button class="main-header__nav-button" type="button" aria-label="Открыть доступные новости/Закрыть доступные новости." data-accordion="button">
-                    <span>Новости</span>
-                    <div class="main-header__nav-image">
-                      <svg width="12" height="12">
-                        <use href="img/sprite.svg#icon-arrow"></use>
-                      </svg>
-                    </div>
-                  </button>
-                  <ul class="main-header__nav-submenu" data-accordion="content">
-                    <li class="main-header__nav-subitem">
-                      <a class="main-header__nav-link" href="#" data-close-menu>Общее</a>
-                    </li>
-                    <li class="main-header__nav-subitem">
-                      <a class="main-header__nav-link" href="#" data-close-menu>Волонтёрство</a>
-                    </li>
-                    <li class="main-header__nav-subitem">
-                      <a class="main-header__nav-link" href="#" data-close-menu>Стажировки</a>
-                    </li>
-                    <li class="main-header__nav-subitem">
-                      <a class="main-header__nav-link" href="#" data-close-menu>Карьера</a>
-                    </li>
-                    <li class="main-header__nav-subitem">
-                      <a class="main-header__nav-link" href="#" data-close-menu>Путешествия</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="main-header__nav-item">
-                  <a class="main-header__link" href="#" data-close-menu>Контакты</a>
-                </li>
-              </ul>
+              <div class="main-header__nav-wrapper">
+                <ul class="main-header__nav-list" data-accordion="parent">
+                  <li class="main-header__nav-item">
+                    <a class="main-header__link" href="#" data-close-menu>О&nbsp;проекте</a>
+                  </li>
+                  <li class="main-header__nav-item" data-accordion="element">
+                    <button class="main-header__nav-button" type="button" aria-label="Открыть доступные программы/Закрыть доступные программы." data-accordion="button">
+                      <span>Программы</span>
+                      <div class="main-header__nav-image">
+                        <svg width="12" height="12">
+                          <use href="img/sprite.svg#icon-arrow"></use>
+                        </svg>
+                      </div>
+                    </button>
+                    <ul class="main-header__nav-submenu" data-accordion="content">
+                      <li class="main-header__nav-subitem">
+                        <a class="main-header__nav-link" href="#" data-close-menu>Стажировки</a>
+                      </li>
+                      <li class="main-header__nav-subitem">
+                        <a class="main-header__nav-link" href="#" data-close-menu>Волонтёрство</a>
+                      </li>
+                      <li class="main-header__nav-subitem">
+                        <a class="main-header__nav-link" href="#" data-close-menu>Учеба</a>
+                      </li>
+                      <li class="main-header__nav-subitem">
+                        <a class="main-header__nav-link" href="#" data-close-menu>Религия</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="main-header__nav-item">
+                    <a class="main-header__link" href="#" data-close-menu>Как&nbsp;поехать</a>
+                  </li>
+                  <li class="main-header__nav-item">
+                    <a class="main-header__link" href="#" data-close-menu>Отзывы</a>
+                  </li>
+                  <li class="main-header__nav-item" data-accordion="element">
+                    <button class="main-header__nav-button" type="button" aria-label="Открыть доступные новости/Закрыть доступные новости." data-accordion="button">
+                      <span>Новости</span>
+                      <div class="main-header__nav-image">
+                        <svg width="12" height="12">
+                          <use href="img/sprite.svg#icon-arrow"></use>
+                        </svg>
+                      </div>
+                    </button>
+                    <ul class="main-header__nav-submenu" data-accordion="content">
+                      <li class="main-header__nav-subitem">
+                        <a class="main-header__nav-link" href="#" data-close-menu>Общее</a>
+                      </li>
+                      <li class="main-header__nav-subitem">
+                        <a class="main-header__nav-link" href="#" data-close-menu>Волонтёрство</a>
+                      </li>
+                      <li class="main-header__nav-subitem">
+                        <a class="main-header__nav-link" href="#" data-close-menu>Стажировки</a>
+                      </li>
+                      <li class="main-header__nav-subitem">
+                        <a class="main-header__nav-link" href="#" data-close-menu>Карьера</a>
+                      </li>
+                      <li class="main-header__nav-subitem">
+                        <a class="main-header__nav-link" href="#" data-close-menu>Путешествия</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="main-header__nav-item">
+                    <a class="main-header__link" href="#" data-close-menu>Контакты</a>
+                  </li>
+                </ul>
+              </div>
             </nav>
           </div>
         </div>
