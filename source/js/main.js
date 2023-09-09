@@ -1,6 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initAccordions} from './modules/accordion/init-accordion';
 import {initModals} from './modules/modals/init-modals';
+import {initSwiper} from './modules/swiper/init-swiper';
 import {Form} from './modules/form-validate/form';
 import {Burger} from './modules/header/burger';
 
@@ -26,6 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const burger = new Burger();
     burger.init();
     initAccordions();
+    initSwiper();
   });
 });
 
