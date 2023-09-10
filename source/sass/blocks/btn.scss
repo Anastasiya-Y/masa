@@ -1,27 +1,91 @@
 .btn {
-  display: inline-flex;
+  display: grid;
+  grid-template-columns: min-content 46px;
+  gap: 30px;
   padding: 4px 4px 4px 30px;
+  text-transform: uppercase;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
 
   color: $color-cerulean-blue;
 
   background-color: $color-default-white;
   border: none;
+  border-radius: 30px;
   cursor: pointer;
   box-shadow: inset 0 0 0 1px $color-cerulean-blue;
 
-  transition: opacity $trans-default;
+  transition: all $trans-default;
 
-  /*&--red {
-    background-color: $color-torch-red;
-  }*/
+  user-select: none;
 
-  &:disabled {
-    opacity: 0.5;
-
-    pointer-events: none;
+  span {
+    display: block;
+    margin-top: 18px;
   }
 
-  @include hover-focus {
-    opacity: 0.8;
+  div {
+    transition: all $trans-default;
+    width: 46px;
+    height: 46px;
+    background-color: $color-cerulean-blue;
+    border-radius: 50%;
+    padding: 18px;
+  }
+
+  svg {
+    transition: all $trans-default;
+    color: $color-default-white;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-cerulean-blue;
+    color: $color-default-white;
+
+    div {
+      background-color: $color-default-white;
+    }
+
+    svg {
+      color: $color-cerulean-blue;
+      transform: rotate(45deg);
+    }
+  }
+
+  &:active {
+    background-color: $color-cerulean-blue;
+    color: rgba($color-default-white, 0.7);
+
+    div {
+      background-color: $color-default-white;
+    }
+
+    svg {
+      color: rgba($color-cerulean-blue, 0.7);
+      transform: rotate(45deg);
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: $color-transparent;
+    color: $color-mischka;
+    box-shadow: inset 0 0 0 1px $color-mischka;
+
+    pointer-events: none;
+
+    div {
+      background-color: $color-mischka;
+    }
+
+    svg {
+      color: rgba($color-default-white, 0.6);
+    }
   }
 }

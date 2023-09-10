@@ -1,4 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-arrow" viewBox="0 0 12 7"><g fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>
+<clipPath id="clip0_2570_1826">
+<rect width="10" height="10" fill="currentColor"/>
+</clipPath>
+</defs><symbol id="icon-arrow-button" viewBox="0 0 10 10"><g fill="none">
+<g clip-path="url(#clip0_2570_1826)">
+<path d="M1 9L9 1M9 1H1.05298M9 1V8.94702" stroke="currentColor"/>
+</g>
+
+</g></symbol><symbol id="icon-arrow" viewBox="0 0 12 7"><g fill="none">
 <path d="M11.4545 0.818359L5.99996 5.72745L0.54541 0.818359" stroke="currentColor"/>
 </g></symbol><symbol id="icon-close" viewBox="0 0 18 18">
 <path d="M1 17L9 9M9 9L17 1M9 9L17 17M9 9L1 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>

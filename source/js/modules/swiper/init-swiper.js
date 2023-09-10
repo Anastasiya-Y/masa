@@ -10,6 +10,7 @@ const initSwiper = () => {
       bulletActiveClass: 'hero__bullet--active',
       clickable: true,
     },
+    uniqueNavElements: false,
     simulateTouch: false,
     centeredSlides: true,
     loop: true,
