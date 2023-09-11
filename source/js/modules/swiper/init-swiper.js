@@ -18,7 +18,7 @@ const initSwiper = () => {
     /* autoplay: {
       delay: 3000,
     },*/
-    // cssMode: true,
+    cssMode: true,
   });
 };
 
