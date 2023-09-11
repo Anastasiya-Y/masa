@@ -2150,7 +2150,7 @@ button,
           flex-direction: column;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(13, 29, 51, 0.4);
   -webkit-transform: scale(1.2);
       -ms-transform: scale(1.2);
           transform: scale(1.2);
@@ -2248,6 +2248,12 @@ button,
   visibility: visible;
   opacity: 1;
   pointer-events: auto;
+}
+
+.programs__content-wrapper {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .custom-input,
