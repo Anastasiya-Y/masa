@@ -2,11 +2,11 @@
   padding: 118px 0 120px 0;
 
   @include vp-1199 {
-    padding: 99px 0 120px 0;
+    padding: 99px 0 101px 0;
   }
 
   @include vp-767 {
-    padding: 69px 0 120px 0;
+    padding: 69px 0;
   }
 }
 
@@ -107,7 +107,7 @@
 .about__link {
   grid-column: -1 / -2;
   justify-self: start;
-  letter-spacing: 0.28px;
+  // letter-spacing: 0.28px;
 
   @include vp-1199 {
     margin-top: 7px;
