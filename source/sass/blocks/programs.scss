@@ -111,7 +111,7 @@
   padding: 280px 51px 20px 20px;
   border-radius: 12px;
 
-  color: $color-default-white;
+  // color: $color-default-white;
 
   background-color: $color-echo-blue;
 
@@ -265,7 +265,6 @@
 .programs__info p {
   font-size: 14px;
   line-height: 18px;
-  color: $color-charcoal;
   margin: 0;
 
   @include vp-1199 {
