@@ -1,3 +1,7 @@
+.programs {
+  padding: 0 0 123px 0;
+}
+
 .programs__wrapper {
   position: relative;
 
@@ -103,10 +107,10 @@
 
   background-color: $color-echo-blue;
 
-  /*@include vp-1239 {
-    width: 30.55vw;
-    min-height: 33.22vw;
-  }*/
+  @include vp-1239 {
+    width: 27.22vw;
+    min-height: 29.17vw;
+  }
 
   @include vp-1199 {
     width: 42.19vw;
