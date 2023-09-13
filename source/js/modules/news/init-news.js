@@ -32,10 +32,10 @@ const initSwiperNews = () => {
         spaceBetween: 30,
 
       },
-      /* 1200: {
+      1200: {
         slidesPerView: 3,
         spaceBetween: 12,
-      }, */
+      },
       1240: {
         slidesPerView: 'auto',
         spaceBetween: 32,

@@ -1,5 +1,5 @@
 .news {
-  padding: 124px 0;
+  padding: 124px 0 123px 0;
 
   @include vp-1199 {
     padding: 100px 0;
@@ -163,7 +163,7 @@
   } */
 }
 
-.news__slide--big {
+.news__slide:first-child {
   width: calc(46% + 34px);
 }
 
@@ -293,7 +293,7 @@
   }
 }
 
-.news__slide--big h3 {
+.news__slide:first-child h3 {
   width: 52.3%;
   padding: 13px 10px 4px 1px;
 }
@@ -333,7 +333,7 @@
   }
 }
 
-.news__slide--big .news__info {
+.news__slide:first-child .news__info {
   width: 70%;
   padding: 0 19px 8px 1px;
   gap: 10px;
@@ -412,7 +412,7 @@
   } */
 }
 
-.news__slide--big .news__slide-link {
+.news__slide:first-child .news__slide-link {
   margin-top: 10px;
 }
 
