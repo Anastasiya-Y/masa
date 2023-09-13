@@ -1,6 +1,5 @@
 const swiperContainerHero = document.querySelector('.hero__container');
 const swiperContainerPrograms = document.querySelector('.programs__container');
-const swiperContainerNews = document.querySelector('.news__container');
 
 const initSwiper = () => {
   const swiperHero = new Swiper(swiperContainerHero, {
@@ -54,41 +53,6 @@ const initSwiper = () => {
         spaceBetween: 12,
       },
       1240: {
-        spaceBetween: 32,
-      },
-    },
-  });
-
-  const swiperNews = new Swiper(swiperContainerNews, {
-    pagination: {
-      /* el: '.news__pagination',
-      type: 'bullets',
-      bulletElement: 'button',
-      bulletClass: 'hero__bullet',
-      bulletActiveClass: 'hero__bullet--active',
-      clickable: true, */
-    },
-    navigation: {
-      nextEl: '.news__nav-button--next',
-      prevEl: '.news__nav-button--prev',
-    },
-    simulateTouch: false,
-    breakpoints: {
-      320: {
-        // slidesPerView: 1,
-        spaceBetween: 20,
-      },
-      768: {
-        // slidesPerView: 'auto',
-        spaceBetween: 30,
-
-      },
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 12,
-      },
-      1240: {
-        slidesPerView: 'auto',
         spaceBetween: 32,
       },
     },

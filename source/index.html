@@ -481,15 +481,15 @@
             <div class="news__wrapper">
               <h2>Новости и&nbsp;материалы</h2>
                 <div class="news__controls">
-                  <button class="news__control" type="button">Общее</button>
-                  <button class="news__control" type="button">Волонтёрство</button>
-                  <button class="news__control" type="button">Стажировки</button>
-                  <button class="news__control" type="button">Карьера</button>
-                  <button class="news__control" type="button">Путешествия</button>
+                  <button class="news__control news__control--active" type="button" data-filter="all">Общее</button>
+                  <button class="news__control" type="button" data-filter="volunteering">Волонтёрство</button>
+                  <button class="news__control" type="button" data-filter="internship">Стажировки</button>
+                  <button class="news__control" type="button" data-filter="career">Карьера</button>
+                  <button class="news__control" type="button" data-filter="travel">Путешествия</button>
                 </div>
                 <div class="news__container swiper-container">
                   <ul class="news__content-wrapper swiper-wrapper">
-                    <li class="news__slide news__slide--big swiper-slide">
+                    <li class="news__slide news__slide--big swiper-slide" data-filter="internship">
                       <div class="news__image-wrapper">
                         <picture>
                           <source type="image/webp" media="(max-width: 1199px)" srcset="img/content/news/news-interview-tablet.webp 1x, img/content/news/news-interview-tablet@2x.webp 2x"/>
@@ -511,7 +511,7 @@
                         </div>
                       </div>
                     </li>
-                    <li class="news__slide swiper-slide">
+                    <li class="news__slide swiper-slide" data-filter="travel">
                       <div class="news__image-wrapper">
                         <picture>
                           <source type="image/webp" media="(max-width: 1199px)" srcset="img/content/news/news-travel-tablet.webp 1x, img/content/news/news-travel-tablet@2x.webp 2x"/>
@@ -533,7 +533,7 @@
                         </div>
                       </div>
                     </li>
-                    <li class="news__slide swiper-slide">
+                    <li class="news__slide swiper-slide" data-filter="volunteering">
                       <div class="news__image-wrapper">
                         <picture>
                           <source type="image/webp" media="(max-width: 1199px)" srcset="img/content/news/news-volunteering-tablet.webp 1x, img/content/news/news-volunteering-tablet@2x.webp 2x"/>
@@ -555,7 +555,7 @@
                         </div>
                       </div>
                     </li>
-                    <li class="news__slide swiper-slide">
+                    <li class="news__slide swiper-slide" data-filter="career">
                       <div class="news__image-wrapper">
                         <picture>
                           <source type="image/webp" media="(max-width: 1199px)" srcset="img/content/news/news-career-tablet.webp 1x, img/content/news/news-career-tablet@2x.webp 2x"/>
@@ -584,7 +584,9 @@
                         <use href="img/sprite.svg#icon-arrow-button"></use>
                       </svg>
                     </button>
-                    <div class="news__pagination"></div>
+                    <div class="news__pagination-wrapper">
+                      <div class="news__pagination"></div>
+                    </div>
                     <button class="news__nav-button news__nav-button--next" aria-label="Вперед.">
                       <svg width="10" height="10">
                         <use href="img/sprite.svg#icon-arrow-button"></use>
