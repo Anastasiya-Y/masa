@@ -32,10 +32,10 @@ const initSwiperNews = () => {
         spaceBetween: 30,
 
       },
-      1200: {
+      /* 1200: {
         slidesPerView: 3,
         spaceBetween: 12,
-      },
+      }, */
       1240: {
         slidesPerView: 'auto',
         spaceBetween: 32,
@@ -61,34 +61,32 @@ const onNewsButtonClick = (evt) => {
         item.style.opacity = '0';
         item.style.display = 'flex';
 
-        item.style.opacity = '1';
-        /* setTimeout(() => {
+        setTimeout(() => {
           item.style.opacity = '1';
-        }, 300); */
+        }, 300);
       });
     } else {
       items.forEach((item) => {
         item.style.opacity = '0';
 
-        item.style.display = 'none';
-        /* setTimeout(() => {
+        setTimeout(() => {
           item.style.display = 'none';
-        }, 300); */
+        }, 300);
 
         if (item.dataset['filter'] === filterClass) {
-          item.style.display = 'flex';
-          item.style.opacity = '1';
-          /* setTimeout(() => {
+          setTimeout(() => {
             item.style.display = 'flex';
           }, 300);
           setTimeout(() => {
             item.style.opacity = '1';
-          }, 400); */
+          }, 400);
         }
       });
     }
 
-    swiperNews.update();
+    setTimeout(() => {
+      swiperNews.update();
+    }, 500);
   }
 };
 

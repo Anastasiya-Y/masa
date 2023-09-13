@@ -1,5 +1,5 @@
 .news {
-  padding: 120px 0;
+  padding: 124px 0;
 
   @include vp-1199 {
     padding: 100px 0;
@@ -26,7 +26,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 14px 26px;
+  padding: 12px 26px;
 
   font-size: 14px;
   font-weight: 500;
@@ -77,6 +77,11 @@
   }
 }
 
+.news__control--active {
+  color: $color-cerulean-blue;
+  box-shadow: inset 0 0 0 1px $color-cerulean-blue;
+}
+
 .news__control:not(:last-child) {
   margin-right: 30px;
 
@@ -90,7 +95,7 @@
 }
 
 .news__wrapper h2 {
-  margin: 0 0 40px 0;
+  margin: 0 0 46px 0;
   text-align: center;
   font-size: 50px;
   font-weight: 400;
@@ -129,9 +134,9 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  width: 286px;
-  min-height: 400px;
-  height: auto;
+  width: 23%;
+  height: 27.8vw;
+  max-height: 400px;
   padding: 124px 46px 0 0;
   border-radius: 12px;
   transition: all $trans-default;
@@ -159,7 +164,7 @@
 }
 
 .news__slide--big {
-  width: 604px;
+  width: calc(46% + 34px);
 }
 
 .news__image-wrapper {
@@ -179,8 +184,8 @@
 }
 
 .news__image-wrapper img {
-  // width: 100%;
-  // height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   max-width: none;
   border-radius: 12px;
@@ -216,17 +221,19 @@
   text-transform: uppercase;
 
   color: $color-cerulean-blue;
-  padding: 12px 12px 6px 0;
   background-color: $color-alabaster;
   border-radius: 0 12px 0 0;
   position: relative;
+
+  padding: 10px 14px 6px 0;
+  margin: 0px 0 -1px -1px;
 
   &::before,
   &::after {
     content: "";
     position: absolute;
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
     background-color: $color-transparent;
     background-image: url("../img/svg/angle-bottom-beige.svg");
     background-repeat: no-repeat;
@@ -234,25 +241,25 @@
   }
 
   &::before {
-    bottom: 0;
-    right: -16px;
+    bottom: 0px;
+    right: -17px;
   }
 
   &::after {
-    top: -16px;
-    left: 0;
+    top: -17px;
+    left: 0px;
   }
 }
 
 .news__text h3 {
-  margin: 0;
-  width: 89.17%;
+  margin: 0 0 0 -1px;
+  width: 89.7%;
 
   font-size: 24px;
   font-weight: 400;
   line-height: 26px;
   color: $color-cerulean-blue;
-  padding: 10px 10px 0 0;
+  padding: 5px 11px 0 0;
   background-color: $color-alabaster;
   border-radius: 0 12px 0 0;
   position: relative;
@@ -261,7 +268,7 @@
     content: "";
     position: absolute;
     bottom: 0;
-    right: -16px;
+    right: -15px;
 
     width: 16px;
     height: 16px;
@@ -286,9 +293,14 @@
   }
 }
 
+.news__slide--big h3 {
+  width: 52.3%;
+  padding: 13px 10px 4px 1px;
+}
+
 .news__info {
   background-color: $color-alabaster;
-  padding: 12px 18px 15px 0;
+  padding: 9px 19px 14px 1px;
   display: grid;
   grid-template-columns: 1fr 30px;
   gap: 16px;
@@ -297,12 +309,13 @@
   min-height: 57px;
   align-items: center;
   position: relative;
+  margin: -1px;
 
   &::before {
     content: "";
     position: absolute;
     bottom: 0;
-    right: -16px;
+    right: -15px;
 
     width: 16px;
     height: 16px;
@@ -318,6 +331,12 @@
     min-height: 52px;
     padding: 12px 10px 12px 0;
   }
+}
+
+.news__slide--big .news__info {
+  width: 70%;
+  padding: 0 19px 8px 1px;
+  gap: 10px;
 }
 
 .news__info p {
@@ -347,7 +366,7 @@
   border-radius: 44px;
   transition: all $trans-default;
   align-self: start;
-  // margin-top: 13px;
+  margin-top: 4px;
 
   svg {
     transition: all $trans-default;
@@ -391,6 +410,10 @@
   @include vp-767 {
     margin-top: 10px;
   } */
+}
+
+.news__slide--big .news__slide-link {
+  margin-top: 10px;
 }
 
 .news__nav {
