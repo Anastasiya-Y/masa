@@ -57,23 +57,33 @@ const onNewsButtonClick = (evt) => {
     let filterClass = activeButton.dataset['filter'];
 
     if (filterClass === 'all') {
+      let slides = [];
+
       items.forEach((item) => {
+        slides.push(item);
         item.style.opacity = '0';
+        item.classList.remove('news__slide--big');
         item.style.display = 'flex';
 
         setTimeout(() => {
           item.style.opacity = '1';
         }, 300);
       });
+
+      slides[0].classList.add('news__slide--big');
     } else {
+      let slides = [];
+
       items.forEach((item) => {
         item.style.opacity = '0';
 
         setTimeout(() => {
           item.style.display = 'none';
+          item.classList.remove('news__slide--big');
         }, 300);
 
         if (item.dataset['filter'] === filterClass) {
+          slides.push(item);
           setTimeout(() => {
             item.style.display = 'flex';
           }, 300);
@@ -82,6 +92,10 @@ const onNewsButtonClick = (evt) => {
           }, 400);
         }
       });
+
+      setTimeout(() => {
+        slides[0].classList.add('news__slide--big');
+      }, 400);
     }
 
     setTimeout(() => {
