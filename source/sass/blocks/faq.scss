@@ -28,16 +28,142 @@
 }
 
 .faq__item {
-  display: flex;
-  padding: 40px 330px 26px 40px;
-  flex-direction: column;
-  align-items: flex-start;
   border-radius: 16px;
-  box-shadow: inset 0 0 0 1px $color-cerulean-blue;
   position: relative;
-  transition: all $trans-default;
 
   &.is-active {
+    .faq__item-content {
+      background-color: $color-cerulean-blue;
+      box-shadow: none;
+    }
+
+    .faq__accordion-button {
+      background-color: $color-default-white;
+      box-shadow: none;
+
+      &::before,
+      &::after {
+        background-color: $color-cerulean-blue;
+      }
+
+      &::before {
+        transform: translateX(-50%) rotate(90deg);
+      }
+    }
+
+    h3 {
+      color: $color-default-white;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: $color-alabaster;
+    }
+  }
+
+  /* &:hover,
+  &:focus {
+    .faq__item-content {
+      background-color: $color-default-white;
+      box-shadow: inset 0 0 0 1px $color-cerulean-blue;
+    }
+
+    .faq__accordion-button {
+      background-color: $color-transparent;
+      box-shadow: inset 0 0 0 1px $color-cerulean-blue;
+
+      &::before,
+      &::after {
+        background-color: $color-cerulean-blue;
+      }
+    }
+  }
+
+  &:active {
+    .faq__item-content {
+      background-color: $color-default-white;
+      box-shadow: inset 0 0 0 1px $color-cerulean-blue;
+    }
+
+    .faq__accordion-button {
+      background-color: $color-endeavour;
+      box-shadow: none;
+
+      &::before,
+      &::after {
+        background-color: $color-default-white;
+      }
+    }
+
+    h3 {
+      color: $color-endeavour;
+    }
+  }
+
+  &.is-active {
+    .faq__item-content {
+      background-color: $color-cerulean-blue;
+      box-shadow: none;
+    }
+
+    .faq__accordion-button {
+      background-color: $color-default-white;
+      box-shadow: none;
+
+      &::before,
+      &::after {
+        background-color: $color-cerulean-blue;
+      }
+
+      &::before {
+        transform: translateX(-50%) rotate(90deg);
+      }
+    }
+
+    h3 {
+      color: $color-default-white;
+    }
+
+    p {
+      color: $color-alabaster;
+    }
+
+    &:hover,
+    &:focus {
+      .faq__accordion-button {
+        background-color: $color-transparent;
+        box-shadow: inset 0 0 0 1px $color-default-white;
+
+        &::before,
+        &::after {
+          background-color: $color-default-white;
+        }
+      }
+    }
+
+    &:active {
+      .faq__item-content {
+        background-color: $color-endeavour;
+      }
+
+      .faq__accordion-button {
+        background-color: $color-default-white;
+        box-shadow: none;
+
+        &::before,
+        &::after {
+          background-color: $color-endeavour;
+        }
+      }
+    }
+  }
+
+  */
+
+
+
+
+  /* &.is-active {
     color: $color-default-white;
     background-color: $color-cerulean-blue;
     padding: 40px 330px 32px 40px;
@@ -46,8 +172,174 @@
       color: $color-default-white;
       margin-bottom: 20px;
     }
+  } */
+}
+
+.faq__item-content {
+  width: 100%;
+  height: 100%;
+  padding: 40px 330px 26px 40px;
+  transition: all $trans-default;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 16px;
+  box-shadow: inset 0 0 0 1px $color-cerulean-blue;
+  position: relative;
+}
+
+.faq__item-click {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  border: none;
+  z-index: 1;
+  background-color: $color-transparent;
+  cursor: pointer;
+
+  &:hover + .faq__item-content,
+  &:focus + .faq__item-content {
+    background-color: $color-default-white;
+    box-shadow: inset 0 0 0 1px $color-cerulean-blue;
+
+    .faq__accordion-button {
+      background-color: $color-transparent;
+      box-shadow: inset 0 0 0 1px $color-cerulean-blue;
+
+      &::before,
+      &::after {
+        background-color: $color-cerulean-blue;
+      }
+    }
+  }
+
+  &:active + .faq__item-content {
+      background-color: $color-default-white;
+      box-shadow: inset 0 0 0 1px $color-cerulean-blue;
+
+    .faq__accordion-button {
+      background-color: $color-endeavour;
+      box-shadow: none;
+
+      &::before,
+      &::after {
+        background-color: $color-default-white;
+      }
+    }
+
+    h3 {
+      color: $color-endeavour;
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:disabled {
+    pointer-events: none;
+
+    & + .faq__item-content {
+      background-color: $color-transparent;
+      box-shadow: inset 0 0 0 1px $color-mischka;
+
+      h3 {
+        color: $color-mischka;
+      }
+
+      p {
+        color: $color-mischka;
+      }
+
+      .faq__accordion-button {
+        background-color: $color-mischka;
+        box-shadow: none;
+
+        &::before,
+        &::after {
+          background-color: rgba($color-default-white, 0.6);
+        }
+      }
+    }
+  }
+
+  .is-active & {
+    & + .faq__item-content {
+      background-color: $color-cerulean-blue;
+      box-shadow: none;
+      padding: 40px 330px 33px 40px;
+
+      .faq__accordion-button {
+        background-color: $color-default-white;
+        box-shadow: none;
+
+        &::before,
+        &::after {
+          background-color: $color-cerulean-blue;
+        }
+
+        &::before {
+          transform: translateX(-50%) rotate(90deg);
+        }
+      }
+
+      h3 {
+        color: $color-default-white;
+      }
+
+      p {
+        color: $color-alabaster;
+      }
+    }
+
+    &:hover + .faq__item-content,
+    &:focus + .faq__item-content {
+      background-color: $color-cerulean-blue;
+
+      .faq__accordion-button {
+        background-color: $color-transparent;
+        box-shadow: inset 0 0 0 1px $color-default-white;
+
+        &::before,
+        &::after {
+          background-color: $color-default-white;
+        }
+      }
+    }
+
+    &:active + .faq__item-content {
+      background-color: $color-endeavour;
+
+      .faq__accordion-button {
+        background-color: $color-default-white;
+        box-shadow: none;
+
+        &::before,
+        &::after {
+          background-color: $color-endeavour;
+        }
+      }
+    }
   }
 }
+
+/* .faq__accordion-question {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: $color-transparent;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  padding: 0;
+} */
 
 .faq__accordion-button {
   position: absolute;
@@ -55,14 +347,10 @@
   right: 40px;
   transition: all $trans-default;
   border-radius: 30px;
-  border: none;
-  cursor: pointer;
   width: 40px;
   height: 40px;
-  padding: 0;
   background-color: $color-cerulean-blue;
 
-  user-select: none;
 
   &::before,
   &::after {
@@ -94,7 +382,7 @@
     transform: translateY(-50%);
   }
 
-  &:hover,
+  /* &:hover,
   &:focus {
     background-color: $color-transparent;
     box-shadow: inset 0 0 0 1px $color-cerulean-blue;
@@ -164,11 +452,11 @@
         background-color: $color-endeavour;
       }
     }
-  }
+  } */
 }
 
 .faq__item h3 {
-  margin: 0 0 20px 0;
+  margin: 0;
   font-size: 28px;
   font-weight: 400;
   line-height: 34px;

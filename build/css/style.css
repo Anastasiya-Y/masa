@@ -2054,10 +2054,152 @@ button,
 }
 
 .faq__item {
+  border-radius: 16px;
+  position: relative;
+  /* &:hover,
+  &:focus {
+    .faq__item-content {
+      background-color: $color-default-white;
+      box-shadow: inset 0 0 0 1px $color-cerulean-blue;
+    }
+
+    .faq__accordion-button {
+      background-color: $color-transparent;
+      box-shadow: inset 0 0 0 1px $color-cerulean-blue;
+
+      &::before,
+      &::after {
+        background-color: $color-cerulean-blue;
+      }
+    }
+  }
+
+  &:active {
+    .faq__item-content {
+      background-color: $color-default-white;
+      box-shadow: inset 0 0 0 1px $color-cerulean-blue;
+    }
+
+    .faq__accordion-button {
+      background-color: $color-endeavour;
+      box-shadow: none;
+
+      &::before,
+      &::after {
+        background-color: $color-default-white;
+      }
+    }
+
+    h3 {
+      color: $color-endeavour;
+    }
+  }
+
+  &.is-active {
+    .faq__item-content {
+      background-color: $color-cerulean-blue;
+      box-shadow: none;
+    }
+
+    .faq__accordion-button {
+      background-color: $color-default-white;
+      box-shadow: none;
+
+      &::before,
+      &::after {
+        background-color: $color-cerulean-blue;
+      }
+
+      &::before {
+        transform: translateX(-50%) rotate(90deg);
+      }
+    }
+
+    h3 {
+      color: $color-default-white;
+    }
+
+    p {
+      color: $color-alabaster;
+    }
+
+    &:hover,
+    &:focus {
+      .faq__accordion-button {
+        background-color: $color-transparent;
+        box-shadow: inset 0 0 0 1px $color-default-white;
+
+        &::before,
+        &::after {
+          background-color: $color-default-white;
+        }
+      }
+    }
+
+    &:active {
+      .faq__item-content {
+        background-color: $color-endeavour;
+      }
+
+      .faq__accordion-button {
+        background-color: $color-default-white;
+        box-shadow: none;
+
+        &::before,
+        &::after {
+          background-color: $color-endeavour;
+        }
+      }
+    }
+  }
+
+  */
+  /* &.is-active {
+    color: $color-default-white;
+    background-color: $color-cerulean-blue;
+    padding: 40px 330px 32px 40px;
+
+    h3 {
+      color: $color-default-white;
+      margin-bottom: 20px;
+    }
+  } */
+}
+.faq__item.is-active .faq__item-content {
+  background-color: #316dc2;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.faq__item.is-active .faq__accordion-button {
+  background-color: #ffffff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.faq__item.is-active .faq__accordion-button::before, .faq__item.is-active .faq__accordion-button::after {
+  background-color: #316dc2;
+}
+.faq__item.is-active .faq__accordion-button::before {
+  -webkit-transform: translateX(-50%) rotate(90deg);
+      -ms-transform: translateX(-50%) rotate(90deg);
+          transform: translateX(-50%) rotate(90deg);
+}
+.faq__item.is-active h3 {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.faq__item.is-active p {
+  color: #f0efe9;
+}
+
+.faq__item-content {
+  width: 100%;
+  height: 100%;
+  padding: 40px 330px 26px 40px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 40px 330px 26px 40px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -2069,19 +2211,136 @@ button,
   -webkit-box-shadow: inset 0 0 0 1px #316dc2;
           box-shadow: inset 0 0 0 1px #316dc2;
   position: relative;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-.faq__item.is-active {
-  color: #ffffff;
-  background-color: #316dc2;
-  padding: 40px 330px 32px 40px;
-}
-.faq__item.is-active h3 {
-  color: #ffffff;
-  margin-bottom: 20px;
 }
 
+.faq__item-click {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  border: none;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+.faq__item-click:hover + .faq__item-content, .faq__item-click:focus + .faq__item-content {
+  background-color: #ffffff;
+  -webkit-box-shadow: inset 0 0 0 1px #316dc2;
+          box-shadow: inset 0 0 0 1px #316dc2;
+}
+.faq__item-click:hover + .faq__item-content .faq__accordion-button, .faq__item-click:focus + .faq__item-content .faq__accordion-button {
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-box-shadow: inset 0 0 0 1px #316dc2;
+          box-shadow: inset 0 0 0 1px #316dc2;
+}
+.faq__item-click:hover + .faq__item-content .faq__accordion-button::before, .faq__item-click:hover + .faq__item-content .faq__accordion-button::after, .faq__item-click:focus + .faq__item-content .faq__accordion-button::before, .faq__item-click:focus + .faq__item-content .faq__accordion-button::after {
+  background-color: #316dc2;
+}
+.faq__item-click:active + .faq__item-content {
+  background-color: #ffffff;
+  -webkit-box-shadow: inset 0 0 0 1px #316dc2;
+          box-shadow: inset 0 0 0 1px #316dc2;
+}
+.faq__item-click:active + .faq__item-content .faq__accordion-button {
+  background-color: #275699;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.faq__item-click:active + .faq__item-content .faq__accordion-button::before, .faq__item-click:active + .faq__item-content .faq__accordion-button::after {
+  background-color: #ffffff;
+}
+.faq__item-click:active + .faq__item-content h3 {
+  color: #275699;
+}
+.faq__item-click:focus-visible {
+  outline: none;
+}
+.faq__item-click:disabled {
+  pointer-events: none;
+}
+.faq__item-click:disabled + .faq__item-content {
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-box-shadow: inset 0 0 0 1px #a9afb7;
+          box-shadow: inset 0 0 0 1px #a9afb7;
+}
+.faq__item-click:disabled + .faq__item-content h3 {
+  color: #a9afb7;
+}
+.faq__item-click:disabled + .faq__item-content p {
+  color: #a9afb7;
+}
+.faq__item-click:disabled + .faq__item-content .faq__accordion-button {
+  background-color: #a9afb7;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.faq__item-click:disabled + .faq__item-content .faq__accordion-button::before, .faq__item-click:disabled + .faq__item-content .faq__accordion-button::after {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.is-active .faq__item-click + .faq__item-content {
+  background-color: #316dc2;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 40px 330px 33px 40px;
+}
+.is-active .faq__item-click + .faq__item-content .faq__accordion-button {
+  background-color: #ffffff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.is-active .faq__item-click + .faq__item-content .faq__accordion-button::before, .is-active .faq__item-click + .faq__item-content .faq__accordion-button::after {
+  background-color: #316dc2;
+}
+.is-active .faq__item-click + .faq__item-content .faq__accordion-button::before {
+  -webkit-transform: translateX(-50%) rotate(90deg);
+      -ms-transform: translateX(-50%) rotate(90deg);
+          transform: translateX(-50%) rotate(90deg);
+}
+.is-active .faq__item-click + .faq__item-content h3 {
+  color: #ffffff;
+}
+.is-active .faq__item-click + .faq__item-content p {
+  color: #f0efe9;
+}
+.is-active .faq__item-click:hover + .faq__item-content, .is-active .faq__item-click:focus + .faq__item-content {
+  background-color: #316dc2;
+}
+.is-active .faq__item-click:hover + .faq__item-content .faq__accordion-button, .is-active .faq__item-click:focus + .faq__item-content .faq__accordion-button {
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-box-shadow: inset 0 0 0 1px #ffffff;
+          box-shadow: inset 0 0 0 1px #ffffff;
+}
+.is-active .faq__item-click:hover + .faq__item-content .faq__accordion-button::before, .is-active .faq__item-click:hover + .faq__item-content .faq__accordion-button::after, .is-active .faq__item-click:focus + .faq__item-content .faq__accordion-button::before, .is-active .faq__item-click:focus + .faq__item-content .faq__accordion-button::after {
+  background-color: #ffffff;
+}
+.is-active .faq__item-click:active + .faq__item-content {
+  background-color: #275699;
+}
+.is-active .faq__item-click:active + .faq__item-content .faq__accordion-button {
+  background-color: #ffffff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.is-active .faq__item-click:active + .faq__item-content .faq__accordion-button::before, .is-active .faq__item-click:active + .faq__item-content .faq__accordion-button::after {
+  background-color: #275699;
+}
+
+/* .faq__accordion-question {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: $color-transparent;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  padding: 0;
+} */
 .faq__accordion-button {
   position: absolute;
   top: 40px;
@@ -2089,16 +2348,80 @@ button,
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   border-radius: 30px;
-  border: none;
-  cursor: pointer;
   width: 40px;
   height: 40px;
-  padding: 0;
   background-color: #316dc2;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  /* &:hover,
+  &:focus {
+    background-color: $color-transparent;
+    box-shadow: inset 0 0 0 1px $color-cerulean-blue;
+
+    &::before,
+    &::after {
+      background-color: $color-cerulean-blue;
+    }
+  }
+
+  &:active {
+    background-color: $color-endeavour;
+    box-shadow: none;
+
+    &::before,
+    &::after {
+      background-color: $color-default-white;
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: $color-mischka;
+    box-shadow: none;
+
+    pointer-events: none;
+
+    &::before,
+    &::after {
+      background-color: rgba($color-default-white, 0.6);
+    }
+  }
+
+  .is-active & {
+    background-color: $color-default-white;
+    box-shadow: none;
+
+    &::before,
+    &::after {
+      background-color: $color-cerulean-blue;
+    }
+
+    &::before {
+      transform: translateX(-50%) rotate(90deg);
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $color-transparent;
+      box-shadow: inset 0 0 0 1px $color-default-white;
+
+      &::before,
+      &::after {
+        background-color: $color-default-white;
+      }
+    }
+
+    &:active {
+      background-color: $color-default-white;
+      box-shadow: none;
+
+      &::before,
+      &::after {
+        background-color: $color-endeavour;
+      }
+    }
+  } */
 }
 .faq__accordion-button::before, .faq__accordion-button::after {
   content: "";
@@ -2125,66 +2448,9 @@ button,
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-.faq__accordion-button:hover, .faq__accordion-button:focus {
-  background-color: rgba(255, 255, 255, 0);
-  -webkit-box-shadow: inset 0 0 0 1px #316dc2;
-          box-shadow: inset 0 0 0 1px #316dc2;
-}
-.faq__accordion-button:hover::before, .faq__accordion-button:hover::after, .faq__accordion-button:focus::before, .faq__accordion-button:focus::after {
-  background-color: #316dc2;
-}
-.faq__accordion-button:active {
-  background-color: #275699;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-.faq__accordion-button:active::before, .faq__accordion-button:active::after {
-  background-color: #ffffff;
-}
-.faq__accordion-button:focus-visible {
-  outline: none;
-}
-.faq__accordion-button:disabled {
-  background-color: #a9afb7;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  pointer-events: none;
-}
-.faq__accordion-button:disabled::before, .faq__accordion-button:disabled::after {
-  background-color: rgba(255, 255, 255, 0.6);
-}
-.is-active .faq__accordion-button {
-  background-color: #ffffff;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-.is-active .faq__accordion-button::before, .is-active .faq__accordion-button::after {
-  background-color: #316dc2;
-}
-.is-active .faq__accordion-button::before {
-  -webkit-transform: translateX(-50%) rotate(90deg);
-      -ms-transform: translateX(-50%) rotate(90deg);
-          transform: translateX(-50%) rotate(90deg);
-}
-.is-active .faq__accordion-button:hover, .is-active .faq__accordion-button:focus {
-  background-color: rgba(255, 255, 255, 0);
-  -webkit-box-shadow: inset 0 0 0 1px #ffffff;
-          box-shadow: inset 0 0 0 1px #ffffff;
-}
-.is-active .faq__accordion-button:hover::before, .is-active .faq__accordion-button:hover::after, .is-active .faq__accordion-button:focus::before, .is-active .faq__accordion-button:focus::after {
-  background-color: #ffffff;
-}
-.is-active .faq__accordion-button:active {
-  background-color: #ffffff;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-.is-active .faq__accordion-button:active::before, .is-active .faq__accordion-button:active::after {
-  background-color: #275699;
-}
 
 .faq__item h3 {
-  margin: 0 0 20px 0;
+  margin: 0;
   font-size: 28px;
   font-weight: 400;
   line-height: 34px;
