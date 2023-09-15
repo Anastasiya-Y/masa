@@ -3,6 +3,7 @@ import {initAccordions} from './modules/accordion/init-accordion';
 import {initNews} from './modules/news/init-news';
 import {initModals} from './modules/modals/init-modals';
 import {initSwiper} from './modules/swiper/init-swiper';
+import {createMap} from './modules/map/map';
 import {Form} from './modules/form-validate/form';
 import {Burger} from './modules/header/burger';
 
@@ -30,6 +31,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initAccordions();
     initNews();
     initSwiper();
+    createMap();
   });
 });
 
