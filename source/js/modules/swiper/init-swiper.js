@@ -1,5 +1,6 @@
 const swiperContainerHero = document.querySelector('.hero__container');
 const swiperContainerPrograms = document.querySelector('.programs__container');
+const swiperContainerFeedback = document.querySelector('.feedback__container');
 
 const initSwiper = () => {
   const swiperHero = new Swiper(swiperContainerHero, {
@@ -54,6 +55,40 @@ const initSwiper = () => {
       },
       1240: {
         spaceBetween: 32,
+      },
+    },
+  });
+
+  const swipeFeedback = new Swiper(swiperContainerFeedback, {
+    navigation: {
+      nextEl: '.feedback__nav-button--next',
+      prevEl: '.feedback__nav-button--prev',
+    },
+    simulateTouch: false,
+    scrollbar: {
+      el: '.feedback__scrollbar',
+      dragSize: '392px',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        scrollbar: {
+          hide: true,
+          enabled: false,
+        },
+      },
+      768: {
+        slidesPerView: 'auto',
+        spaceBetween: 30,
+        scrollbar: {
+          dragSize: '324px',
+        },
+      },
+      1200: {
+        slidesPerView: 2,
+        spaceBetween: 32,
+        dragSize: '392px',
       },
     },
   });
