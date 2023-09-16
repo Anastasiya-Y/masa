@@ -1,0 +1,56 @@
+.connection {
+  padding: 120px 0 0 0;
+
+  @include vp-1199 {
+    padding: 100px 0 0 0;
+  }
+}
+
+.connection__wrapper {
+  position: relative;
+  background-color: $color-bleach-white;
+  border-radius: 16px;
+}
+
+.connection__image-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  //min-height: 803px;
+  height: 100%;
+  z-index: 1;
+  border-radius: 16px;
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.connection__image-wrapper img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+}
+
+.connection__content-wrapper {
+  position: relative;
+  z-index: 2;
+  border-radius: 16px;
+  background-color: $color-cerulean-blue;
+  width: 40.16%;
+  padding: 70px 74px 51px 74px;
+  // color: $color-default-white;
+
+  @include vp-1199 {
+    padding: 50px 45px;
+    width: 65.19%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    padding: 50px 15px;
+  }
+}

@@ -4,6 +4,7 @@ import {initNews} from './modules/news/init-news';
 import {initModals} from './modules/modals/init-modals';
 import {initSwiper} from './modules/swiper/init-swiper';
 import {createMap} from './modules/map/map';
+import {CustomSelect} from './modules/select/custom-select';
 import {Form} from './modules/form-validate/form';
 import {Burger} from './modules/header/burger';
 
@@ -28,6 +29,8 @@ window.addEventListener('DOMContentLoaded', () => {
     form.init();
     const burger = new Burger();
     burger.init();
+    const select = new CustomSelect();
+    select.init();
     initAccordions();
     initNews();
     initSwiper();
