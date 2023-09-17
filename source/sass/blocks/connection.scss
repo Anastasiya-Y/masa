@@ -4,6 +4,10 @@
   @include vp-1199 {
     padding: 100px 0 0 0;
   }
+
+  @include vp-767 {
+    padding: 67px 0 0 0;
+  }
 }
 
 .connection__wrapper {
@@ -40,17 +44,17 @@
   z-index: 2;
   border-radius: 16px;
   background-color: $color-cerulean-blue;
-  width: 40.16%;
-  padding: 70px 74px 51px 74px;
+  width: 40.2%;
+  padding: 82px 74px 51px 74px;
   // color: $color-default-white;
 
   @include vp-1199 {
-    padding: 50px 45px;
+    padding: 60px 45px 58px 45px;
     width: 65.19%;
   }
 
   @include vp-767 {
     width: 100%;
-    padding: 50px 15px;
+    padding: 51px 15px 50px 15px;
   }
 }
