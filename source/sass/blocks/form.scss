@@ -48,6 +48,10 @@
   }
 }
 
+.form__fields-wrapper--modal {
+  margin-bottom: 30px;
+}
+
 .form__field-wrapper {
   display: flex;
   flex-direction: column;
@@ -55,10 +59,6 @@
   color: rgba($color-alabaster, 0.8);
   font-size: 14px;
   line-height: 18px;
-}
-
-.form__field-wrapper--input,
-.form__field-wrapper--textarea {
 
   label {
     display: block;
@@ -186,10 +186,18 @@
       border: 1px solid $color-wild-watermelon;
       background-color: rgba($color-wild-watermelon, 0.2);
 
+      & + label {
+        color: rgba($color-alabaster, 0.8);
+      }
+
       &:focus,
       &:hover {
         border: 1px solid $color-default-white;
         background-color: $color-transparent;
+
+        & + label {
+          color: $color-alabaster;
+        }
       }
     }
   }
@@ -206,40 +214,90 @@
   } */
 }
 
-.form__field-wrapper--select {
-  margin-bottom: 4px;
+.form__field-wrapper--modal {
 
   label {
-    display: block;
-    width: fit-content;
-    padding-bottom: 12px;
-    transition: all $trans-default;
-    order: -1;
+    color: rgba($color-charcoal, 0.8);
 
     &:hover {
-      color: $color-alabaster;
+      //border: 1px solid red;
+      color: $color-charcoal;
 
-      &__button {
-        border: 1px solid $color-default-white;
+      input,
+      textarea {
+        border: 1px solid $color-charcoal;
         //background-color: $color-transparent;
       }
     }
+  }
 
-    @include vp-1199 {
-      padding-bottom: 8px;
+  input {
+    color: $color-charcoal;
+    border: 1px solid rgba($color-charcoal, 0.3);
+
+    &:hover {
+      border: 1px solid $color-charcoal;
+      //background-color: $color-transparent;
+
+      & + label {
+        color: $color-charcoal;
+      }
     }
 
-    @include vp-767 {
-      font-size: 12px;
-      line-height: 14px;
-      padding-bottom: 11px;
+    &:focus,
+    &:active {
+
+      border: 1px solid $color-charcoal;
+      //background-color: $color-transparent;
+
+      & + label {
+        color: $color-charcoal;
+      }
+    }
+
+    &:disabled {
+      border: 1px solid rgba($color-mischka, 0.5);
+      background-color: rgba($color-mischka, 0.2);
+
+      & + label {
+        color: rgba($color-mischka, 0.6);
+      }
     }
   }
 
-  @include vp-767 {
-    margin: 0;
+  &.is-invalid {
+    input {
+      border: 1px solid $color-wild-watermelon;
+      background-color: rgba($color-wild-watermelon, 0.2);
+
+      & + label {
+        color: $color-charcoal;
+      }
+
+      &:focus,
+      &:hover {
+        border: 1px solid $color-charcoal;
+        background-color: $color-transparent;
+
+        & + label {
+          color: $color-charcoal;
+        }
+      }
+    }
   }
+
+  /* &.is-valid {
+    input {
+      border: 2px solid #22b259;
+
+      &:focus,
+      &:hover {
+        border: 2px solid rgba(#22b259, 0.5);
+      }
+    }
+  } */
 }
+
 
 .custom-toggle {
   position: relative;
@@ -305,79 +363,44 @@
     }
   }
 
-  &--checkbox {
-    .custom-toggle__icon {
+
+  .custom-toggle__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+
+    border: 1px solid rgba($color-default-white, 0.7);
+    background-color: $color-transparent;
+
+    transition: all $trans-default;
+    // color: $color-default-white;
+
+    &::before {
+      content: "";
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 50%;
+      left: 50%;
 
-      width: 20px;
-      height: 20px;
-      border-radius: 2px;
+      width: 10px;
+      height: 10px;
 
-      border: 1px solid rgba($color-default-white, 0.7);
-      background-color: $color-transparent;
+
+      background-image: url("../img/svg/icon-checkbox.svg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+
+      transform: translate(-50%, -50%);
 
       transition: all $trans-default;
-      // color: $color-default-white;
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-
-        width: 10px;
-        height: 10px;
-
-        background-color: $color-transparent;
-
-
-        background-image: url("../img/svg/icon-checkbox.svg");
-        background-repeat: no-repeat;
-        background-size: 100%;
-
-        transform: translate(-50%, -50%);
-
-        transition: all $trans-default;
-        // color: $color-cerulean-blue;
-        opacity: 0;
-      }
+      // color: $color-cerulean-blue;
+      opacity: 0;
     }
   }
 
-  /*&--radio {
-    .custom-toggle__icon {
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      width: 28px;
-      height: 28px;
-
-      border: 1px solid #2c39f2;
-      border-radius: 50%;
-
-      transition: border 0.3s ease;
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-
-        width: 20px;
-        height: 20px;
-
-        color: rgba(255, 255, 255, 0);
-
-        border-radius: 50%;
-        transform: translate(-50%, -50%);
-
-        transition: color 0.3s ease;
-      }
-    }
-  }*/
 
   input:checked {
     & + .custom-toggle__icon {
@@ -432,6 +455,60 @@
   }*/
 }
 
+.custom-toggle--modal {
+  color: rgba($color-charcoal, 0.9);
+
+  input {
+    &:hover + .custom-toggle__icon,
+    &:focus + .custom-toggle__icon {
+      border: 1px solid $color-charcoal;
+      background-color: $color-transparent;
+    }
+
+    &:disabled + .custom-toggle__icon {
+      border: 1px solid rgba($color-mischka, 0.5);
+      background-color: rgba($color-mischka, 0.2);
+    }
+  }
+
+  .custom-toggle__icon {
+    border: 1px solid rgba($color-charcoal, 0.3);
+
+    &::before {
+      background-image: url("../img/svg/icon-checkbox-white.svg");
+    }
+  }
+
+
+  input:checked {
+    & + .custom-toggle__icon {
+      background-color: $color-cerulean-blue;
+      border: 1px solid $color-cerulean-blue;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    &:hover + .custom-toggle__icon,
+    &:focus + .custom-toggle__icon {
+      background-color: $color-transparent;
+      border: 1px solid $color-charcoal;
+
+      &::before {
+        background-image: url("../img/svg/icon-checkbox-charcoal.svg");
+      }
+    }
+  }
+
+  &.is-invalid {
+    .custom-toggle__icon {
+      border: 1px solid rgba($color-wild-watermelon, 0.7);
+      background-color: rgba($color-wild-watermelon, 0.2);
+    }
+  }
+}
+
 .form__button {
   display: flex;
   width: 100%;
@@ -441,4 +518,11 @@
     flex-grow: 1;
   }
 }
+
+.form__button--modal {
+  width: fit-content;
+  margin: 0 auto;
+  background-color: $color-transparent;
+}
+
 

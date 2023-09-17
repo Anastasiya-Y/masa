@@ -1,20 +1,36 @@
 .custom-select {
   position: relative;
+  margin-bottom: 4px;
 
-  &__label {
-    position: absolute;
-    top: 50%;
-    left: 10px;
+  label {
+    display: block;
+    width: fit-content;
+    padding-bottom: 12px;
+    transition: all $trans-default;
+    order: -1;
 
-    transform: translateY(-50%);
+    &:hover {
+      color: $color-alabaster;
 
-    transition: transform 0.3s ease, opacity  0.3s ease;
-
-    pointer-events: none;
-
-    @media screen and (max-width: 767px) {
-      transform: translateY(calc(-50% - 5px));
+      &__button {
+        border: 1px solid $color-default-white;
+        //background-color: $color-transparent;
+      }
     }
+
+    @include vp-1199 {
+      padding-bottom: 8px;
+    }
+
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 14px;
+      padding-bottom: 11px;
+    }
+  }
+
+  @include vp-767 {
+    margin: 0;
   }
 
   select {
@@ -144,6 +160,7 @@
     font-size: 14px;
     line-height: 14px;
     flex-shrink: 0;
+    height: 16px;
     width: 80%;
     overflow: hidden;
 
@@ -229,8 +246,8 @@
       border: 1px solid $color-wild-watermelon;
       background-color: rgba($color-wild-watermelon, 0.2);
 
-      &:focus,
-      &:hover {
+      &:hover,
+      &:focus {
         border: 1px solid $color-default-white;
         background-color: $color-transparent;
       }
@@ -249,3 +266,97 @@
     }
   }
 }
+
+.custom-select--modal {
+  label {
+    color: rgba($color-charcoal, 0.8);
+
+    &:hover {
+      color: $color-charcoal;
+
+      .custom-select__button {
+        border: 1px solid $color-charcoal;
+        //background-color: $color-transparent;
+      }
+
+    }
+  }
+
+  .custom-select__button {
+    &:hover,
+    &:focus {
+      border: 1px solid $color-charcoal;
+
+      & + label {
+        color: $color-charcoal;
+      }
+    }
+
+    &:disabled {
+      border: 1px solid rgba($color-mischka, 0.5);
+      background-color: rgba($color-mischka, 0.2);
+
+      & + label {
+        color: rgba($color-mischka, 0.6);
+      }
+    }
+  }
+
+  .custom-select__text {
+    color: $color-charcoal;
+  }
+
+  .custom-select__icon {
+    background-color: $color-charcoal;
+  }
+
+  &.is-disabled {
+    pointer-events: none;
+
+    .custom-select__button {
+      border: 1px solid rgba($color-mischka, 0.5);
+      background-color: rgba($color-mischka, 0.2);
+
+      & + label {
+        color: rgba($color-mischka, 0.6);
+      }
+    }
+
+    label {
+      color: rgba($color-mischka, 0.6);
+    }
+  }
+
+  &.is-open {
+    .custom-select__list {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .custom-select__icon {
+      transform: rotate(180deg);
+    }
+
+    .custom-select__label {
+      opacity: 0;
+    }
+
+    label {
+      color: $color-charcoal;
+    }
+  }
+
+  &.is-invalid {
+    .custom-select__button {
+      border: 1px solid $color-wild-watermelon;
+      background-color: rgba($color-wild-watermelon, 0.2);
+
+      &:hover,
+      &:focus {
+        background-color: $color-transparent;
+        border: 1px solid $color-charcoal;
+      }
+    }
+  }
+}
+

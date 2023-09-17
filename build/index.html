@@ -843,7 +843,7 @@
                           </ul>
                         </div>
 
-                        <div class="form__field-wrapper custom-toggle custom-toggle--checkbox" data-validate-type="checkbox" data-required>
+                        <div class="custom-toggle custom-toggle--checkbox" data-validate-type="checkbox" data-required>
                           <label>
                             <input type="checkbox" name="user-agreement" value="user-agreement-1" >
                             <span class="custom-toggle__icon"></span>
@@ -958,25 +958,53 @@
           <p>Оставьте ваши контакты, если у&nbsp;вас остались вопросы&nbsp;– мы&nbsp;на&nbsp;них ответим!</p>
           <div class="form__container" data-form-validate data-callback="base">
             <form action="https://echo.htmlacademy.ru/" method="post">
-              <div class="form__field-wrapper" data-validate-type="text" data-limitation="letters-and-hyphen" data-required>
-                <label>
-                  <span>Имя</span>
-                  <input type="text" name="name" minlength="1" required/>
-                </label>
+              <div class="form__fields-wrapper">
+                <div class="form__field-wrapper form__field-wrapper--modal" data-validate-type="text" data-limitation="letters-and-hyphen" data-required>
+                  <input type="text" name="name" id="name-field-modal" minlength="1" required/>
+                  <label for="name-field-modal">Имя</label>
+                </div>
+                <div class="form__field-wrapper form__field-wrapper--modal" data-validate-type="phone" data-required>
+                  <input type="tel" name="tel" id="tel-field-modal" required/>
+                  <label for="tel-field-modal">Телефон</label>
+                </div>
+
+                  <div class="form__field-wrapper custom-select custom-select--modal" data-select="data-select" data-validate-type="select" data-name="some-name" data-id="id-example-1" data-required>
+                    <!--<span class="custom-select__error">Выберите тему обращения</span>-->
+                    <!--<span class="custom-select__placeholder">Выберите одну из опций</span>-->
+                    <button class="custom-select__button" type="button" aria-label="Выберите одну из опций" id="city-field-modal">
+                      <span class="custom-select__text"></span>
+                      <span class="custom-select__icon"></span>
+                    </button>
+                    <label for="city-field-modal">Выберите город</label>
+                    <ul class="custom-select__list" role="listbox">
+                      <li class="custom-select__item" tabindex="0" data-select-value="saint-petersburg-1" aria-selected="false" role="option">Санкт-Петербург</li>
+                      <li class="custom-select__item" tabindex="0" data-select-value="saint-petersburg-2" aria-selected="false" role="option">Санкт-Петербург</li>
+                      <li class="custom-select__item" tabindex="0" data-select-value="saint-petersburg-3" aria-selected="false" role="option">Санкт-Петербург</li>
+                      <li class="custom-select__item" tabindex="0" data-select-value="saint-petersburg-4" aria-selected="false" role="option">Санкт-Петербург</li>
+                    </ul>
+                  </div>
+
+                  <div class="custom-toggle custom-toggle--modal custom-toggle--checkbox" data-validate-type="checkbox" data-required>
+                    <label>
+                      <input type="checkbox" name="user-agreement" value="user-agreement-1" >
+                      <span class="custom-toggle__icon"></span>
+                      <span class="custom-toggle__label">Я согласен на обработку моих персональных данных</span>
+                    </label>
+                  </div>
+
               </div>
-              <div class="form__field-wrapper" data-validate-type="phone" data-required>
-                <label>
-                  <span>Телефон</span>
-                  <input type="tel" name="tel" required/>
-                </label>
-              </div>
-                <!-- Нужна ли обертка-->
-                <label>
-                  <span>Выберите город</span>
-                </label>
-              <button class="form__button btn" type="submit">
-                Отправить
+
+
+
+              <button class="form__button form__button--modal btn" type="submit">
+                <span>Отправить</span>
+                <div>
+                  <svg width="10" height="10">
+                    <use href="img/sprite.svg#icon-arrow-button"></use>
+                  </svg>
+                </div>
               </button>
+
             </form>
           </div>
         </div>

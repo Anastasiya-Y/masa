@@ -30,6 +30,7 @@
   }
 
   &__wrapper {
+
     position: relative;
 
     display: flex;
@@ -59,8 +60,11 @@
   &__content {
     position: relative;
 
-    width: 600px;
-    padding: 40px;
+
+    width: 510px;
+    padding: 53px 80px 60px 80px;
+    border-radius: 16px;
+
 
     background-color: $color-default-white;
 
@@ -115,5 +119,40 @@
     opacity: 1;
 
     pointer-events: auto;
+  }
+
+  h2 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 36px;
+    color: $color-cerulean-blue;
+    margin: 0 0 7px 0;
+    text-align: center;
+  }
+
+  p {
+    margin: 0 0 20px 0;
+    color: $color-charcoal;
+    text-align: center;
+  }
+
+
+
+  .custom-toggle__icon {
+    border: 1px solid rgba($color-charcoal, 0.3);
+  }
+
+  .custom-toggle__label {
+    color: rgba($color-charcoal, 0.9);
+  }
+}
+
+.custom-select--modal {
+  .custom-select__button {
+    border: 1px solid rgba($color-charcoal, 0.3);
+  }
+
+  label {
+    padding-bottom: 8px;
   }
 }
