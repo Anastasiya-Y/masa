@@ -2,11 +2,11 @@
   padding: 124px 0 123px 0;
 
   @include vp-1199 {
-    padding: 100px 0;
+    padding: 99px 0;
   }
 
   @include vp-767 {
-    padding: 67px 0;
+    padding: 69px 0;
   }
 }
 
@@ -20,6 +20,15 @@
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto 40px auto;
+
+  @include vp-1199 {
+    margin-bottom: 30px;
+  }
+
+  @include vp-767 {
+    flex-wrap: nowrap;
+    margin-bottom: 24px;
+  }
 }
 
 .news__control {
@@ -69,11 +78,13 @@
   }
 
   @include vp-1199 {
-    padding: 14px 20px;
+    padding: 12px 20px;
   }
 
   @include vp-767 {
-    padding: 10px 14px;
+    padding: 9px 14px 8px 14px;
+    font-size: 12px;
+    line-height: 12px;
   }
 }
 
@@ -87,6 +98,10 @@
 
   @include vp-1199 {
     margin-right: 10px;
+  }
+
+  @include vp-767 {
+    margin-right: 12px;
   }
 }
 
@@ -104,13 +119,13 @@
 
   @include vp-1199 {
     font-size: 34px;
-    margin-bottom: 30px;
+    margin-bottom: 31px;
   }
 
   @include vp-767 {
     font-size: 20px;
     line-height: 20px;
-    margin-bottom: 24px;
+    margin-bottom: 27px;
   }
 }
 
@@ -145,6 +160,18 @@
 
   background-color: $color-echo-blue;
 
+  @include vp-1199 {
+    height: 45.57vw;
+    width: auto;
+    padding: 124px 85px 0 0;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    height: 75vw;
+    padding: 52px 27px 0 0;
+  }
+
   /*@include vp-1239 {
     width: 27.22vw;
     min-height: 29.17vw;
@@ -165,6 +192,24 @@
 
 .news__slide--big {
   width: calc(46% + 34px);
+
+  @include vp-1199 {
+    height: 45.57vw;
+    width: auto;
+    padding: 124px 83px 0 0;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    height: 103.125vw;
+  }
+}
+
+.news__slide:nth-child(4n + 1),
+.news__slide:nth-child(5n + 1) {
+  @include vp-767 {
+    height: 103.125vw;
+  }
 }
 
 /* .news__slide:first-child {
@@ -245,13 +290,36 @@
   }
 
   &::before {
-    bottom: 0px;
+    bottom: 0;
     right: -17px;
   }
 
   &::after {
     top: -17px;
-    left: 0px;
+    left: 0;
+  }
+
+  @include vp-1199 {
+    padding: 11px 13px 5px 1px;
+
+    &::before {
+      bottom: 1px;
+      right: -16px;
+    }
+
+    &::after {
+      top: -18px;
+    }
+  }
+
+  @include vp-767 {
+    &::before {
+      bottom: 0;
+    }
+
+    &::after {
+      top: -17px;
+    }
   }
 }
 
@@ -284,22 +352,47 @@
   }
 
   @include vp-1199 {
-    width: 86.25%;
+    width: 86.8%;
     font-size: 20px;
     line-height: 24px;
-    padding: 10px 18px 0 0;
+    padding: 5px 18px 2px 0;
+    margin: 0;
+
+    &::before {
+      bottom: 1px;
+      right: -16px;
+    }
   }
 
   @include vp-767 {
     font-size: 16px;
     line-height: 18px;
-    width: 76.05%;
+    width: 76.3%;
+
+    padding: 10px 21px 5px 1px;
+    margin-left: -1px;
+
+    &::before {
+
+      right: -15px;
+    }
+  }
+}
+
+.news__slide-big time {
+  @include vp-1199 {
+    padding: 11px 12px 5px 1px;
   }
 }
 
 .news__slide--big h3 {
   width: 52.3%;
   padding: 13px 10px 4px 1px;
+
+  @include vp-1199 {
+    width: 85.7%;
+    padding: 5px 10px 2px 0;
+  }
 }
 
 /* .news__slide:first-child h3 {
@@ -335,10 +428,24 @@
     background-size: cover;
   }
 
+  @include vp-1199 {
+    padding: 7px 19px 11px 1px;
+    gap: 15px;
+
+    &::before {
+      bottom: 1px;
+      right: -16px;
+    }
+  }
+
 
   @include vp-767 {
     min-height: 52px;
-    padding: 12px 10px 12px 0;
+    padding: 12px 12px 11px 1px;
+
+    &::before {
+      right: -15px;
+    }
   }
 }
 
@@ -346,6 +453,17 @@
   width: 70%;
   padding: 0 19px 8px 1px;
   gap: 10px;
+
+  @include vp-1199 {
+    width: 100%;
+    padding: 7px 19px 11px 1px;
+    gap: 22px;
+
+    &::before {
+      bottom: 1px;
+      right: -16px;
+    }
+  }
 }
 
 /* .news__slide:first-child .news__info {
@@ -380,8 +498,8 @@
   background-color: $color-cerulean-blue;
   border-radius: 44px;
   transition: all $trans-default;
-  align-self: start;
-  margin-top: 4px;
+  align-self: center;
+  margin-top: 1px;
 
   svg {
     transition: all $trans-default;
@@ -418,17 +536,22 @@
     }
   }
 
-  /* @include vp-1199 {
-    margin-top: 15px;
+  @include vp-1199 {
+    margin: 0 0 0 1px;
   }
 
+/*
   @include vp-767 {
     margin-top: 10px;
   } */
 }
 
 .news__slide--big .news__slide-link {
-  margin-top: 10px;
+  margin-top: 3px;
+
+  @include vp-1199 {
+    margin: 0 0 0 1px;
+  }
 }
 
 /* .news__slide:first-child .news__slide-link {
@@ -501,6 +624,7 @@
 
   user-select: none;
   border-radius: 30px;
+  margin-top: 5px;
 
   svg {
     transition: all $trans-default;

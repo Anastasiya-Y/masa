@@ -24,13 +24,20 @@ const initSwiperNews = () => {
     simulateTouch: false,
     breakpoints: {
       320: {
-        // slidesPerView: 1,
+        slidesPerView: 1,
+        grid: {
+          rows: 2,
+          fill: 'row',
+        },
         spaceBetween: 20,
       },
       768: {
-        // slidesPerView: 'auto',
+        slidesPerView: 2,
         spaceBetween: 30,
-
+        grid: {
+          rows: 2,
+          fill: 'row',
+        },
       },
       1200: {
         slidesPerView: 3,
