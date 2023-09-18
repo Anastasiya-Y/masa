@@ -9,6 +9,8 @@
 
 </g></symbol><symbol id="icon-arrow" viewBox="0 0 12 7"><g fill="none">
 <path d="M11.4545 0.818359L5.99996 5.72745L0.54541 0.818359" stroke="currentColor"/>
+</g></symbol><symbol id="icon-checkbox" viewBox="0 0 10 10"><g fill="none">
+<path d="M1 4.5L3.94737 8L9 2" stroke-linecap="round" stroke-linejoin="round"/>
 </g></symbol><symbol id="icon-close" viewBox="0 0 18 18">
 <path d="M1 17L9 9M9 9L17 1M9 9L17 17M9 9L1 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
 </symbol><symbol id="icon-ok" viewBox="0 0 16 16"><g fill="currentColor">

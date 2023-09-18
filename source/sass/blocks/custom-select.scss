@@ -14,7 +14,6 @@
 
       &__button {
         border: 1px solid $color-default-white;
-        //background-color: $color-transparent;
       }
     }
 
@@ -208,13 +207,6 @@
     }
   }
 
-  /*&.open-up {
-    .custom-select__list {
-      bottom: auto;
-      top: 0;
-      transform: translateY(calc(-100% + 10px));
-    }
-  }*/
 
   &.is-open {
     .custom-select__list {
@@ -270,19 +262,21 @@
 .custom-select--modal {
   label {
     color: rgba($color-charcoal, 0.8);
+    padding-bottom: 8px;
 
     &:hover {
       color: $color-charcoal;
 
       .custom-select__button {
         border: 1px solid $color-charcoal;
-        //background-color: $color-transparent;
       }
 
     }
   }
 
   .custom-select__button {
+    border: 1px solid rgba($color-charcoal, 0.3);
+
     &:hover,
     &:focus {
       border: 1px solid $color-charcoal;

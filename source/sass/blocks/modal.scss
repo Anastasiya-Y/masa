@@ -87,6 +87,30 @@
     background: $color-transparent;
     border: none;
     cursor: pointer;
+    color: $color-cerulean-blue;
+
+    svg {
+      transition: all $trans-default;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-endeavour;
+    }
+
+    &:active {
+      color: $color-black-pearl;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:disabled {
+      color: $color-mischka;
+
+      pointer-events: none;
+    }
   }
 
   &--responsive {
@@ -136,23 +160,5 @@
     text-align: center;
   }
 
-
-
-  .custom-toggle__icon {
-    border: 1px solid rgba($color-charcoal, 0.3);
-  }
-
-  .custom-toggle__label {
-    color: rgba($color-charcoal, 0.9);
-  }
 }
 
-.custom-select--modal {
-  .custom-select__button {
-    border: 1px solid rgba($color-charcoal, 0.3);
-  }
-
-  label {
-    padding-bottom: 8px;
-  }
-}

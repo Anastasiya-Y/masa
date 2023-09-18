@@ -65,24 +65,13 @@
     width: fit-content;
     padding-bottom: 8px;
     transition: all $trans-default;
-    /* display: inline-flex;
-    align-items: center;
-    margin-bottom: 12px;
-    //width: 100%;
-
-    @media screen and (max-width: 767px) {
-      align-items: flex-start;
-      flex-direction: column;
-    }*/
 
     &:hover {
-      //border: 1px solid red;
       color: $color-alabaster;
 
       input,
       textarea {
         border: 1px solid $color-default-white;
-        //background-color: $color-transparent;
       }
     }
 
@@ -95,12 +84,8 @@
 
   input,
   textarea {
-    // flex-grow: 1;
-    // max-width: 300px;
     order: 1;
-    // margin-left: auto;
     padding: 14px 25px;
-
     border: 1px solid rgba($color-default-white, 0.3);
     border-radius: 8px;
     outline: none;
@@ -112,14 +97,8 @@
     line-height: 14px;
     color: $color-default-white;
 
-    /* @media screen and (max-width: 767px) {
-      max-width: unset;
-      width: 100%;
-    }*/
-
     &:hover {
       border: 1px solid $color-default-white;
-      //background-color: $color-transparent;
 
       & + label {
         color: $color-alabaster;
@@ -129,7 +108,6 @@
     &:focus,
     &:active {
       border: 1px solid $color-default-white;
-      //background-color: $color-transparent;
 
       & + label {
         color: $color-alabaster;
@@ -158,27 +136,6 @@
     }
   }
 
-  /* &__label {
-    @media screen and (max-width: 767px) {
-      margin: 0 0 18px 0;
-    }
-  } */
-
-  /* &__error {
-    position: absolute;
-    right: 0;
-    bottom: 35px;
-
-    color: #ff1553;
-
-    opacity: 0;
-
-    transition: opacity 0.3s ease;
-
-    @media screen and (max-width: 767px) {
-      bottom: 20px;
-    }
-  } */
 
   &.is-invalid {
     input,
@@ -201,17 +158,6 @@
       }
     }
   }
-
-  /* &.is-valid {
-    input {
-      border: 2px solid #22b259;
-
-      &:focus,
-      &:hover {
-        border: 2px solid rgba(#22b259, 0.5);
-      }
-    }
-  } */
 }
 
 .form__field-wrapper--modal {
@@ -220,13 +166,11 @@
     color: rgba($color-charcoal, 0.8);
 
     &:hover {
-      //border: 1px solid red;
       color: $color-charcoal;
 
       input,
       textarea {
         border: 1px solid $color-charcoal;
-        //background-color: $color-transparent;
       }
     }
   }
@@ -237,7 +181,6 @@
 
     &:hover {
       border: 1px solid $color-charcoal;
-      //background-color: $color-transparent;
 
       & + label {
         color: $color-charcoal;
@@ -248,7 +191,6 @@
     &:active {
 
       border: 1px solid $color-charcoal;
-      //background-color: $color-transparent;
 
       & + label {
         color: $color-charcoal;
@@ -285,228 +227,6 @@
       }
     }
   }
-
-  /* &.is-valid {
-    input {
-      border: 2px solid #22b259;
-
-      &:focus,
-      &:hover {
-        border: 2px solid rgba(#22b259, 0.5);
-      }
-    }
-  } */
-}
-
-
-.custom-toggle {
-  position: relative;
-  font-size: 12px;
-  line-height: 12px;
-
-  display: flex;
-  //width: 500px;
-  //padding: 14px 0 10px 36px;
-
-  /*@media screen and (max-width: 767px) {
-    padding: 14px 0 10px 0;
-    width: 100%;
-  }*/
-
-  /*&:last-of-type {
-    padding: 14px 0 58px 36px;
-
-    @media screen and (max-width: 767px) {
-      padding: 14px 0 58px 0;
-    }
-  }*/
-
-  input {
-    position: absolute;
-
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-
-    clip: rect(0 0 0 0);
-
-    &:hover + .custom-toggle__icon,
-    &:focus + .custom-toggle__icon {
-      border: 1px solid $color-default-white;
-      background-color: $color-transparent;
-    }
-
-    &:disabled + .custom-toggle__icon {
-      border: 1px solid $color-default-white;
-      background-color: rgba($color-default-white, 0.6);
-    }
-  }
-
-  label {
-    position: relative;
-
-    padding: 5px 0 0 30px;
-
-    cursor: pointer;
-
-    span {
-      margin-bottom: 0;
-      margin-left: 0;
-
-      @include vp-767 {
-        line-height: 14px;
-      }
-    }
-
-    @include vp-767 {
-      padding: 0 0 0 30px;
-    }
-  }
-
-
-  .custom-toggle__icon {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 20px;
-    height: 20px;
-    border-radius: 2px;
-
-    border: 1px solid rgba($color-default-white, 0.7);
-    background-color: $color-transparent;
-
-    transition: all $trans-default;
-    // color: $color-default-white;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-
-      width: 10px;
-      height: 10px;
-
-
-      background-image: url("../img/svg/icon-checkbox.svg");
-      background-repeat: no-repeat;
-      background-size: 100%;
-
-      transform: translate(-50%, -50%);
-
-      transition: all $trans-default;
-      // color: $color-cerulean-blue;
-      opacity: 0;
-    }
-  }
-
-
-  input:checked {
-    & + .custom-toggle__icon {
-      background-color: $color-default-white;
-
-      &::before {
-        opacity: 1;
-      }
-    }
-
-    &:hover + .custom-toggle__icon,
-    &:focus + .custom-toggle__icon {
-      background-color: $color-transparent;
-      border: 1px solid $color-default-white;
-
-      &::before {
-        background-image: url("../img/svg/icon-checkbox-white.svg");
-      }
-    }
-
-    &:disabled + .custom-toggle__icon {
-      background-color: $color-mischka;
-      border: 1px solid $color-mischka;
-
-      &::before {
-        background-image: url("../img/svg/icon-checkbox-white.svg");
-      }
-    }
-  }
-
-
-
-  &.is-invalid {
-    .custom-toggle__icon {
-      border: 1px solid rgba($color-wild-watermelon, 0.7);
-      background-color: rgba($color-wild-watermelon, 0.2);
-    }
-  }
-
-  /*.input-message {
-    position: absolute;
-    right: 0;
-    bottom: -5px;
-
-    &.is-invalid {
-      color: #ff0000;
-    }
-
-    &.is-valid {
-      color: #15ab07;
-    }
-  }*/
-}
-
-.custom-toggle--modal {
-  color: rgba($color-charcoal, 0.9);
-
-  input {
-    &:hover + .custom-toggle__icon,
-    &:focus + .custom-toggle__icon {
-      border: 1px solid $color-charcoal;
-      background-color: $color-transparent;
-    }
-
-    &:disabled + .custom-toggle__icon {
-      border: 1px solid rgba($color-mischka, 0.5);
-      background-color: rgba($color-mischka, 0.2);
-    }
-  }
-
-  .custom-toggle__icon {
-    border: 1px solid rgba($color-charcoal, 0.3);
-
-    &::before {
-      background-image: url("../img/svg/icon-checkbox-white.svg");
-    }
-  }
-
-
-  input:checked {
-    & + .custom-toggle__icon {
-      background-color: $color-cerulean-blue;
-      border: 1px solid $color-cerulean-blue;
-
-      &::before {
-        opacity: 1;
-      }
-    }
-
-    &:hover + .custom-toggle__icon,
-    &:focus + .custom-toggle__icon {
-      background-color: $color-transparent;
-      border: 1px solid $color-charcoal;
-
-      &::before {
-        background-image: url("../img/svg/icon-checkbox-charcoal.svg");
-      }
-    }
-  }
-
-  &.is-invalid {
-    .custom-toggle__icon {
-      border: 1px solid rgba($color-wild-watermelon, 0.7);
-      background-color: rgba($color-wild-watermelon, 0.2);
-    }
-  }
 }
 
 .form__button {
@@ -524,5 +244,3 @@
   margin: 0 auto;
   background-color: $color-transparent;
 }
-
-
