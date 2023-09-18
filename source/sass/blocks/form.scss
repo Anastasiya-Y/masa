@@ -49,7 +49,16 @@
 }
 
 .form__fields-wrapper--modal {
-  margin-bottom: 30px;
+  margin-bottom: 31px;
+
+  @include vp-1199 {
+    margin-bottom: 33px;
+  }
+
+  @include vp-1199 {
+    gap: 16px;
+    margin-bottom: 24px;
+  }
 }
 
 .form__field-wrapper {
@@ -173,6 +182,12 @@
         border: 1px solid $color-charcoal;
       }
     }
+
+    @include vp-767 {
+      font-size: 14px;
+      padding-bottom: 9px;
+    }
+
   }
 
   input {
@@ -204,6 +219,11 @@
       & + label {
         color: rgba($color-mischka, 0.6);
       }
+    }
+
+    @include vp-767 {
+      min-height: 43px;
+      padding: 11px 25px;
     }
   }
 
@@ -243,4 +263,8 @@
   width: fit-content;
   margin: 0 auto;
   background-color: $color-transparent;
+
+  @include vp-767 {
+    width: 100%;
+  }
 }
