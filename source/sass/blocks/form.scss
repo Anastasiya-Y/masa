@@ -254,7 +254,7 @@
   width: 100%;
   text-align: center;
 
-  span {
+  span:first-child {
     flex-grow: 1;
   }
 }

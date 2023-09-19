@@ -2,7 +2,7 @@ const swiperContainerHero = document.querySelector('.hero__container');
 const swiperContainerPrograms = document.querySelector('.programs__container');
 const swiperContainerFeedback = document.querySelector('.feedback__container');
 
-const initSwiper = () => {
+const initSwiperHero = () => {
   const swiperHero = new Swiper(swiperContainerHero, {
     pagination: {
       el: '.hero__pagination',
@@ -17,12 +17,18 @@ const initSwiper = () => {
     centeredSlides: true,
     loop: true,
     speed: 300,
-    /* autoplay: {
+    autoplay: {
       delay: 3000,
-    },*/
+    },
     cssMode: true,
   });
 
+  return swiperHero;
+};
+
+const swiperHero = initSwiperHero();
+
+const initSwiper = () => {
   const swiperPrograms = new Swiper(swiperContainerPrograms, {
     navigation: {
       nextEl: '.programs__nav-button--next',
@@ -54,6 +60,7 @@ const initSwiper = () => {
         spaceBetween: 12,
       },
       1240: {
+        slidesPerView: 3,
         spaceBetween: 32,
       },
     },
@@ -94,4 +101,4 @@ const initSwiper = () => {
   });
 };
 
-export {initSwiper};
+export {initSwiper, swiperHero};

@@ -40,79 +40,15 @@
   position: relative;
 
   border-radius: 16px;
+  min-height: 120px;
+
+  @include vp-1199 {
+    min-height: 100px;
+  }
 
   @include vp-767 {
     border-radius: 14px;
-  }
-
-  &.is-active {
-    .faq__item-content {
-      background-color: $color-cerulean-blue;
-      box-shadow: none;
-    }
-
-    .faq__accordion-button {
-      background-color: $color-default-white;
-      box-shadow: none;
-
-      &::before,
-      &::after {
-        background-color: $color-cerulean-blue;
-      }
-
-      &::before {
-        transform: translateX(-50%) rotate(90deg);
-      }
-    }
-
-    h3 {
-      margin-bottom: 20px;
-
-      color: $color-default-white;
-    }
-
-    p {
-      color: $color-alabaster;
-    }
-  }
-
-  /* &:hover,
-  &:focus {
-    .faq__item-content {
-      background-color: $color-default-white;
-      box-shadow: inset 0 0 0 1px $color-cerulean-blue;
-    }
-
-    .faq__accordion-button {
-      background-color: $color-transparent;
-      box-shadow: inset 0 0 0 1px $color-cerulean-blue;
-
-      &::before,
-      &::after {
-        background-color: $color-cerulean-blue;
-      }
-    }
-  }
-
-  &:active {
-    .faq__item-content {
-      background-color: $color-default-white;
-      box-shadow: inset 0 0 0 1px $color-cerulean-blue;
-    }
-
-    .faq__accordion-button {
-      background-color: $color-endeavour;
-      box-shadow: none;
-
-      &::before,
-      &::after {
-        background-color: $color-default-white;
-      }
-    }
-
-    h3 {
-      color: $color-endeavour;
-    }
+    min-height: 80px;
   }
 
   &.is-active {
@@ -142,52 +78,7 @@
     p {
       color: $color-alabaster;
     }
-
-    &:hover,
-    &:focus {
-      .faq__accordion-button {
-        background-color: $color-transparent;
-        box-shadow: inset 0 0 0 1px $color-default-white;
-
-        &::before,
-        &::after {
-          background-color: $color-default-white;
-        }
-      }
-    }
-
-    &:active {
-      .faq__item-content {
-        background-color: $color-endeavour;
-      }
-
-      .faq__accordion-button {
-        background-color: $color-default-white;
-        box-shadow: none;
-
-        &::before,
-        &::after {
-          background-color: $color-endeavour;
-        }
-      }
-    }
   }
-
-  */
-
-
-
-
-  /* &.is-active {
-    color: $color-default-white;
-    background-color: $color-cerulean-blue;
-    padding: 40px 330px 32px 40px;
-
-    h3 {
-      color: $color-default-white;
-      margin-bottom: 20px;
-    }
-  } */
 }
 
 .faq__item-content {
@@ -196,9 +87,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
   width: 100%;
   height: 100%;
-  padding: 40px 330px 26px 40px;
+  padding: 32px 330px 25px 40px;
 
   border-radius: 16px;
   box-shadow: inset 0 0 0 1px $color-cerulean-blue;
@@ -206,12 +98,12 @@
   transition: all $trans-default;
 
   @include vp-1199 {
-    padding: 37px 168px 37px 30px;
+    padding: 18px 168px 15px 30px;
   }
 
   @include vp-767 {
     border-radius: 14px;
-    padding: 22px 60px 22px 15px;
+    padding: 21px 15px 6px 15px;
   }
 }
 
@@ -302,13 +194,13 @@
 
   .is-active & {
     & + .faq__item-content {
-      padding: 40px 330px 33px 40px;
+      padding: 32px 330px 33px 40px;
 
       background-color: $color-cerulean-blue;
       box-shadow: none;
 
       @include vp-1199 {
-        padding: 37px 108px 26px 30px;
+        padding: 18px 108px 24px 30px;
       }
 
       @include vp-767 {
@@ -331,18 +223,18 @@
 
       h3 {
         color: $color-default-white;
-
-        @include vp-1199 {
-          margin-bottom: 23px;
-        }
-
-        @include vp-767 {
-          margin: 0 50px 17px 0;
-        }
       }
 
       p {
         color: $color-alabaster;
+
+        @include vp-1199 {
+          padding-right: 50px;
+        }
+
+        @include vp-1199 {
+          padding-right: 10px;
+        }
       }
     }
 
@@ -376,20 +268,6 @@
     }
   }
 }
-
-/* .faq__accordion-question {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: $color-transparent;
-  border: none;
-  border-radius: 16px;
-  cursor: pointer;
-  padding: 0;
-} */
 
 .faq__accordion-button {
   position: absolute;
@@ -441,81 +319,9 @@
   }
 
   @include vp-767 {
-    top: 20px;
+    top: 21px;
     right: 15px;
   }
-
-  /* &:hover,
-  &:focus {
-    background-color: $color-transparent;
-    box-shadow: inset 0 0 0 1px $color-cerulean-blue;
-
-    &::before,
-    &::after {
-      background-color: $color-cerulean-blue;
-    }
-  }
-
-  &:active {
-    background-color: $color-endeavour;
-    box-shadow: none;
-
-    &::before,
-    &::after {
-      background-color: $color-default-white;
-    }
-  }
-
-  &:focus-visible {
-    outline: none;
-  }
-
-  &:disabled {
-    background-color: $color-mischka;
-    box-shadow: none;
-
-    pointer-events: none;
-
-    &::before,
-    &::after {
-      background-color: rgba($color-default-white, 0.6);
-    }
-  }
-
-  .is-active & {
-    background-color: $color-default-white;
-    box-shadow: none;
-
-    &::before,
-    &::after {
-      background-color: $color-cerulean-blue;
-    }
-
-    &::before {
-      transform: translateX(-50%) rotate(90deg);
-    }
-
-    &:hover,
-    &:focus {
-      background-color: $color-transparent;
-      box-shadow: inset 0 0 0 1px $color-default-white;
-
-      &::before,
-      &::after {
-        background-color: $color-default-white;
-      }
-    }
-
-    &:active {
-      background-color: $color-default-white;
-      box-shadow: none;
-
-      &::before,
-      &::after {
-        background-color: $color-endeavour;
-      }
-    }
-  } */
 }
 
 .faq__item h3 {
@@ -539,10 +345,6 @@
   }
 }
 
-/* .faq__answer {
-  max-height: none;
-} */
-
 .faq__answer p {
   margin: 0;
 
@@ -552,5 +354,31 @@
 
   @include vp-767 {
     font-size: 14px;
+  }
+}
+
+.faq__item-question {
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+
+  @include vp-1199 {
+    min-height: 65px;
+    margin-bottom: 3px;
+  }
+
+  @include vp-767 {
+    min-height: 65px;
+    margin-bottom: 13px;
+    min-height: 40px;
+    width: 85%;
+  }
+}
+
+.faq__item--study,
+.faq__item--registration {
+  .faq__accordion-button {
+    top: 28px;
   }
 }

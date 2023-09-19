@@ -9,7 +9,7 @@
 
   color: $color-cerulean-blue;
 
-  background-color: $color-default-white;
+  background-color: $color-transparent;
   border: none;
   border-radius: 30px;
   cursor: pointer;
@@ -20,18 +20,22 @@
   user-select: none;
   letter-spacing: 0.28px;
 
-  span {
+  span:first-child {
     display: block;
     margin: 16px 30px 0 0;
   }
 
-  div {
+  span:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: all $trans-default;
     width: 46px;
     height: 46px;
     background-color: $color-cerulean-blue;
     border-radius: 50%;
     padding: 18px;
+    align-self: center;
   }
 
   svg {
@@ -44,7 +48,7 @@
     background-color: $color-cerulean-blue;
     color: $color-default-white;
 
-    div {
+    span:last-child {
       background-color: $color-default-white;
     }
 
@@ -58,7 +62,7 @@
     background-color: $color-cerulean-blue;
     color: rgba($color-default-white, 0.7);
 
-    div {
+    span:last-child {
       background-color: $color-default-white;
     }
 
@@ -79,7 +83,7 @@
 
     pointer-events: none;
 
-    div {
+    span:last-child {
       background-color: $color-mischka;
     }
 
@@ -93,7 +97,7 @@
     box-shadow: inset 0 0 0 1px $color-default-white;
     color: $color-default-white;
 
-    div {
+    span:last-child {
       background-color: $color-default-white;
     }
 
@@ -106,7 +110,7 @@
       background-color: $color-default-white;
       color: $color-cerulean-blue;
 
-      div {
+      span:last-child {
         background-color: $color-cerulean-blue;
       }
 
@@ -119,7 +123,7 @@
       background-color: $color-default-white;
       color: rgba($color-cerulean-blue, 0.7);
 
-      div {
+      span:last-child {
         background-color: $color-cerulean-blue;
       }
 
@@ -134,11 +138,11 @@
     font-size: 12px;
     line-height: 12px;
 
-    span {
+    span:first-child {
       margin: 12px 20px 0 0;
     }
 
-    div {
+    span:last-child {
       width: 34px;
       height: 34px;
       padding: 12px;

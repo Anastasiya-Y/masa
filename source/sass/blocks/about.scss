@@ -14,7 +14,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 33px 138px;
-  margin: 0 8.55% 60px 0;
+  margin: 0 8.55% 59px 0;
 
   @include vp-1199 {
     grid-template-columns: 1fr;
@@ -107,7 +107,7 @@
 .about__link {
   grid-column: -1 / -2;
   justify-self: start;
-  // letter-spacing: 0.28px;
+  background-color: $color-alabaster;
 
   @include vp-1199 {
     margin-top: 7px;
@@ -148,7 +148,6 @@
   gap: 20px;
   border: 1px solid $color-alabaster;
   border-radius: 16px;
-  // margin: 22px 0 0 20px;
   position: relative;
 
   &::before {
@@ -166,7 +165,6 @@
     background-image: url("../img/svg/icon-star.svg");
     background-repeat: no-repeat;
     background-position: 10px 10px;
-    // background-size: cover;
   }
 
   @include vp-1199 {
@@ -251,10 +249,6 @@
 
   font-weight: 300;
   line-height: 20px;
-
-  /* @include vp-1199 {
-    line-height: 16px;
-  } */
 
   @include vp-767 {
     font-size: 14px;

@@ -33,11 +33,7 @@
 .main-footer__logo {
   margin-right: 20px;
   transition: all $trans-default;
-  //position: relative;
   display: inline-flex;
-  /*display: flex;
-  align-items: center;
-  justify-content: center;*/
   grid-area: logo;
 
   &:hover,

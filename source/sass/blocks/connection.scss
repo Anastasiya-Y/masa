@@ -22,7 +22,6 @@
   left: 0;
 
   width: 100%;
-  //min-height: 803px;
   height: 100%;
   z-index: 1;
   border-radius: 16px;
@@ -46,7 +45,6 @@
   background-color: $color-cerulean-blue;
   width: 40.2%;
   padding: 82px 74px 51px 74px;
-  // color: $color-default-white;
 
   @include vp-1199 {
     padding: 60px 45px 58px 45px;
