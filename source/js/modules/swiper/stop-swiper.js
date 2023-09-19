@@ -4,13 +4,13 @@ const controlSwiper = () => {
   if (document.body.classList.contains('scroll-lock')) {
     swiperHero.autoplay.stop();
   } else {
-    swiperHero.autoplay.start();
-  }
+      swiperHero.autoplay.start();
+    }
 };
 
 const stopSwiper = () => {
   document.body.addEventListener('click', controlSwiper);
-  document.body.addEventListener('keydown', controlSwiper);
+  // document.addEventListener('keydown', controlSwiper);
 };
 
 export {stopSwiper};
