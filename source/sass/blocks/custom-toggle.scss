@@ -86,7 +86,6 @@
     }
 
 
-
     &:hover + .custom-toggle__icon-wrapper,
     &:focus + .custom-toggle__icon-wrapper {
       background-color: $color-transparent;
@@ -106,7 +105,6 @@
       }
     }
   }
-
 
 
   &.is-invalid {

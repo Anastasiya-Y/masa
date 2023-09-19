@@ -28,6 +28,9 @@
 }
 
 .main-header__logo {
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
   margin-right: 20px;
   transition: all $trans-default;
   display: inline-flex;
@@ -78,9 +81,10 @@
 }
 
 .main-header__button {
-  display: grid;
-  grid-template-columns: min-content 46px;
-  gap: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
   padding: 4px 4px 4px 20px;
 
   color: $color-cerulean-blue;
@@ -94,6 +98,7 @@
   cursor: pointer;
   box-shadow: inset 0 0 0 1px $color-cerulean-blue;
   border-radius: 30px;
+  user-select: none;
 
 
   transition: all $trans-default;
@@ -149,7 +154,7 @@
   .is-open & {
     background-color: $color-cerulean-blue;
     color: $color-default-white;
-    gap: 172px;
+    min-width: 286px;
 
     &:hover,
     &:focus {
@@ -182,14 +187,15 @@
       width: 100%;
       grid-template-columns: 1fr 46px;
       transition: width 3s;
+      min-width: 290px;
     }
   }
 }
 
 .main-header__button span:first-child {
   display: block;
-  margin-top: 16px;
   transition: all $trans-default;
+  margin-right: 21px;
 
   @include vp-767 {
     justify-self: start;
@@ -201,7 +207,7 @@
   height: 46px;
   background-color: $color-cerulean-blue;
   border-radius: 50%;
-  display: block;
+  flex-shrink: 0;
 
   position: relative;
 
@@ -266,12 +272,12 @@
   color: rgba($color-default-white, 0.7);
   display: grid;
   grid-template-columns: 1fr;
-  gap: 28px;
+  gap: 18px;
 
   transform: scale(0);
 
   .is-open & {
-    padding: 35px 25px;
+    padding: 27px 25px 26px 25px;
     transform: scale(1);
   }
 }
@@ -281,6 +287,8 @@
   color: rgba($color-default-white, 0.7);
   text-transform: uppercase;
   transition: all $trans-default;
+  user-select: none;
+  letter-spacing: 0.32px;
 
   &:hover,
   &:focus {
@@ -305,7 +313,7 @@
 .main-header__nav-button {
   display: grid;
   grid-template-columns: min-content 12px;
-  gap: 10px;
+  gap: 13px;
   padding: 0;
   border: none;
   background-color: $color-transparent;
@@ -313,6 +321,7 @@
   text-transform: uppercase;
   cursor: pointer;
   transition: all $trans-default;
+  user-select: none;
 
   &:hover,
   &:focus {
@@ -363,7 +372,7 @@
   visibility: hidden;
 
   .is-active & {
-    margin-top: 20px;
+    margin-top: 10px;
     visibility: visible;
   }
 }
@@ -371,6 +380,7 @@
 .main-header__nav-link {
   color: rgba($color-default-white, 0.6);
   transition: all $trans-default;
+  user-select: none;
 
   &:hover,
   &:focus {

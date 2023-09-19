@@ -14,40 +14,41 @@
   position: relative;
 
   display: grid;
-  grid-template-columns: auto 1fr auto 52px 54px;
-  grid-template-rows: repeat(3, auto);
-  row-gap: 39px;
-  grid-template-areas:
-    "title . link link link"
+
+  grid-template-areas: "title . link link link"
     "swiper swiper swiper swiper swiper"
     "scroll scroll scroll . buttons";
+  grid-template-columns: auto 1fr auto 52px 54px;
+  grid-template-rows: repeat(3, auto);
 
   @include vp-1199 {
     row-gap: 38px;
   }
 
   @include vp-767 {
+    grid-template-areas: "title . buttons"
+      "swiper swiper swiper"
+      "link link link";
     grid-template-columns: auto 1fr 50px;
-    grid-template-areas:
-    "title . buttons"
-    "swiper swiper swiper"
-    "link link link";
     row-gap: 29px;
   }
+  row-gap: 39px;
 }
 
 .programs__wrapper h2 {
   margin: 4px 20px 0 0;
-  grid-area: title;
 
-  font-size: 50px;
   font-weight: 400;
+  font-size: 50px;
   line-height: 50px;
   color: $color-cerulean-blue;
 
+  grid-area: title;
+
   @include vp-1199 {
-    font-size: 34px;
     margin: 1px 20px 0 0;
+
+    font-size: 34px;
   }
 
   @include vp-767 {
@@ -57,8 +58,9 @@
 }
 
 .programs__link {
-  grid-area: link;
   background-color: $color-alabaster;
+  align-self: start;
+  grid-area: link;
 
   @include vp-767 {
     width: 70%;
@@ -74,14 +76,15 @@
 
 .programs__container {
   max-width: 1240px;
-  overflow: hidden;
-  grid-area: swiper;
   margin-top: 6px;
+  overflow: hidden;
+
+  grid-area: swiper;
 
   @include vp-1199 {
-    overflow: visible;
     width: 100%;
     margin-top: 2px;
+    overflow: visible;
   }
 
   @include vp-767 {
@@ -92,6 +95,7 @@
 .programs__content-wrapper {
   margin: 0;
   padding: 0;
+
   list-style-type: none;
 }
 
@@ -102,12 +106,12 @@
   flex-direction: column;
   justify-content: flex-end;
   width: 392px;
-  min-height: 421px;
   height: auto;
+  min-height: 421px;
   padding: 280px 51px 20px 20px;
-  border-radius: 12px;
 
   background-color: $color-echo-blue;
+  border-radius: 12px;
 
   @include vp-1239 {
     width: 27.22vw;
@@ -135,6 +139,7 @@
 
   width: 100%;
   height: 100%;
+
   border-radius: 12px;
 
   &::before {
@@ -142,48 +147,74 @@
     position: absolute;
     top: 0;
     left: 0;
-    border-radius: 12px;
 
     width: 100%;
     height: 100%;
 
     background-color: rgba($color-cerulean-blue, 0.2);
+    border-radius: 12px;
   }
 }
 
 .programs__image-wrapper img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
   max-width: none;
+  height: 100%;
+
   border-radius: 12px;
+
+  object-fit: cover;
 }
 
 .programs__text {
   position: relative;
   z-index: 2;
+
   display: flex;
   flex-direction: column;
 }
 
 .programs__text h3 {
-  margin: 0;
-  width: 60.44%;
+  position: relative;
 
-  font-size: 24px;
+  width: 60.44%;
+  margin: 0;
+  padding: 11px 18px 5px 18px;
+
   font-weight: 400;
+  font-size: 24px;
   line-height: 26px;
   color: $color-cerulean-blue;
-  padding: 11px 18px 5px 18px;
+
   background-color: $color-default-white;
   border-radius: 12px 12px 0 0;
-  position: relative;
+
+  @include vp-1199 {
+    width: 65.6%;
+    padding: 13px 18px 2px 18px;
+
+    font-size: 20px;
+    line-height: 24px;
+
+    &::before {
+      right: -18px;
+      bottom: 1px;
+    }
+  }
+
+  @include vp-767 {
+    width: 54.2%;
+    padding: 18px 18px 7px 18px;
+
+    font-size: 16px;
+    line-height: 18px;
+  }
 
   &::before {
     content: "";
     position: absolute;
-    bottom: 0;
     right: -17px;
+    bottom: 0;
 
     width: 18px;
     height: 18px;
@@ -193,37 +224,20 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-
-  @include vp-1199 {
-    width: 65.6%;
-    font-size: 20px;
-    line-height: 24px;
-    padding: 13px 18px 2px 18px;
-
-    &::before {
-      bottom: 1px;
-      right: -18px;
-    }
-  }
-
-  @include vp-767 {
-    font-size: 16px;
-    line-height: 18px;
-    padding: 18px 18px 7px 18px;
-    width: 54.2%;
-  }
 }
 
 .programs__info {
-  background-color: $color-default-white;
-  padding: 10px 18px 12px 18px;
   display: grid;
-  grid-template-columns: 1fr 30px;
-  gap: 16px;
-  border-radius: 0px 12px 12px 12px;
-  margin-top: -1px;
-  min-height: 79px;
   align-items: center;
+  min-height: 79px;
+  margin-top: -1px;
+  padding: 10px 18px 12px 18px;
+
+  background-color: $color-default-white;
+  border-radius: 0 12px 12px 12px;
+
+  gap: 16px;
+  grid-template-columns: 1fr 30px;
 
   @include vp-1199 {
     min-height: 77px;
@@ -237,9 +251,10 @@
 }
 
 .programs__info p {
+  margin: 0;
+
   font-size: 14px;
   line-height: 18px;
-  margin: 0;
 
   @include vp-1199 {
     line-height: 20px;
@@ -253,17 +268,28 @@
 
 .programs__slide-link {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: start;
   width: 30px;
   height: 30px;
+  margin-top: 13px;
   padding: 10px;
-  align-items: center;
-  justify-content: center;
+
   color: $color-default-white;
+
   background-color: $color-cerulean-blue;
   border-radius: 44px;
+
   transition: all $trans-default;
-  align-self: start;
-  margin-top: 13px;
+
+  @include vp-1199 {
+    margin-top: 15px;
+  }
+
+  @include vp-767 {
+    margin-top: 10px;
+  }
 
   svg {
     transition: all $trans-default;
@@ -275,6 +301,7 @@
 
     svg {
       color: $color-cerulean-blue;
+
       transform: rotate(45deg);
     }
   }
@@ -284,6 +311,7 @@
 
     svg {
       color: rgba($color-cerulean-blue, 0.7);
+
       transform: rotate(45deg);
     }
   }
@@ -299,23 +327,17 @@
       color: rgba($color-default-white, 0.6);
     }
   }
-
-  @include vp-1199 {
-    margin-top: 15px;
-  }
-
-  @include vp-767 {
-    margin-top: 10px;
-  }
 }
 
 .programs__scrollbar {
-  grid-area: scroll;
   width: 100%;
-  height: 2px;
-  background-color: rgba($color-cerulean-blue, 0.2);
-  margin-top: 11px;
   max-width: 1134px;
+  height: 2px;
+  margin-top: 11px;
+
+  background-color: rgba($color-cerulean-blue, 0.2);
+
+  grid-area: scroll;
 
   @include vp-767 {
     display: none;
@@ -328,8 +350,9 @@
 }
 
 .programs__nav-buttons {
-  grid-area: buttons;
   display: flex;
+
+  grid-area: buttons;
 }
 
 .programs__nav-button {
@@ -342,17 +365,17 @@
 
   background-color: $color-transparent;
   border: none;
+  border-radius: 30px;
   cursor: pointer;
 
   transition: all $trans-default;
 
-
   user-select: none;
-  border-radius: 30px;
 
   svg {
-    transition: all $trans-default;
     color: $color-cerulean-blue;
+
+    transition: all $trans-default;
   }
 
   &:hover,
@@ -390,17 +413,16 @@
 .programs__nav-button--prev {
   margin-right: 10px;
 
-  svg {
-    transform: rotate(-135deg);
-  }
-
   @include vp-767 {
     margin-right: 6px;
+  }
+
+  svg {
+    transform: rotate(-135deg);
   }
 }
 
 .programs__nav-button--next {
-
   svg {
     transform: rotate(45deg);
   }

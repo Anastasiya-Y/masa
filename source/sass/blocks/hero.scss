@@ -69,8 +69,6 @@
 }
 
 
-
-
 .hero___pagination-wrapper {
   position: relative;
   width: fit-content;
@@ -120,7 +118,6 @@
 }
 
 
-
 .hero__bullet {
   width: 10px;
   height: 10px;
@@ -167,11 +164,6 @@
 .hero__bullet--active {
   background-color: $color-cerulean-blue;
 }
-
-
-
-
-
 
 
 .hero__slide-wrapper h2 {
@@ -245,7 +237,6 @@
     padding: 0;
     display: flex;
     flex-direction: column;
-    background-color: none;
     border-radius: 0;
     margin-top: -5px;
     background-color: $color-transparent;

@@ -124,32 +124,33 @@
       background-color: $color-cerulean-blue;
       color: $color-default-white;
 
-      @media (hover: hover) {
-        &:hover:not(.focus-visible) {
-          background-color: $color-transparent;
-          color: $color-cerulean-blue;
-        }
+      &:hover {
+        background-color: $color-transparent;
+        color: $color-cerulean-blue;
       }
 
-      &.focus-visible:focus {
+      &:focus-visible {
+        outline: none;
+      }
+
+      &:focus,
+      &:active {
         background-color: $color-cerulean-blue;
         color: $color-default-white;
       }
     }
 
-    @media (hover: hover) {
-      &:hover:not(.focus-visible) {
-        background-color: $color-transparent;
-        color: $color-cerulean-blue;
-      }
+    &:hover {
+      background-color: $color-transparent;
+      color: $color-cerulean-blue;
     }
 
-    &.focus-visible:focus {
-      background-color: $color-cerulean-blue;
-      color: $color-default-white;
+    &:focus-visible {
+      outline: none;
     }
 
-    &:active:active {
+    &:focus,
+    &:active {
       background-color: $color-cerulean-blue;
       color: $color-default-white;
     }
@@ -270,7 +271,6 @@
       .custom-select__button {
         border: 1px solid $color-charcoal;
       }
-
     }
 
     @include vp-767 {
@@ -313,8 +313,6 @@
   }
 
   &.is-disabled {
-    pointer-events: none;
-
     .custom-select__button {
       border: 1px solid rgba($color-mischka, 0.5);
       background-color: rgba($color-mischka, 0.2);
@@ -361,4 +359,3 @@
     }
   }
 }
-

@@ -1,8 +1,12 @@
 .feedback {
-  padding: 120px 0;
+  padding: 125px 0 121px 0;
+
+  @include vp-1199 {
+    padding: 101px 0 100px 0;
+  }
 
   @include vp-767 {
-    padding: 119px 0 120px;
+    padding: 69px 0 27px 0;
   }
 }
 
@@ -23,8 +27,8 @@
     grid-template-columns: 1fr 52px;
     grid-template-rows: repeat(2, auto);
     grid-template-areas:
-    "title title buttons"
-    "swiper swiper swiper";
+      "title title buttons"
+      "swiper swiper swiper";
   }
 }
 
@@ -75,6 +79,7 @@
 .feedback__slide {
   display: grid;
   grid-template-columns: auto 1fr;
+  grid-template-rows: min-content auto;
   row-gap: 25px;
   padding: 50px 51px 43px 50px;
   border-radius: 16px;
@@ -95,6 +100,7 @@
     width: 100%;
     padding: 31px 15px 26px 15px;
     grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content auto;
     row-gap: 14px;
 
     @media (orientation: landscape) {
@@ -364,7 +370,6 @@
 }
 
 .feedback__nav-button--next {
-
   svg {
     transform: rotate(45deg);
   }

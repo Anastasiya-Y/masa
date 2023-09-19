@@ -69,7 +69,7 @@
     background-color: $color-default-white;
 
     @include vp-1199 {
-      padding: 55px 80px 60px 80px;
+      padding: 55px 80px 59px 80px;
     }
 
     @include vp-767 {
@@ -127,8 +127,6 @@
 
       pointer-events: none;
     }
-
-
   }
 
   &--responsive {
@@ -200,6 +198,4 @@
       margin-bottom: 20px;
     }
   }
-
 }
-

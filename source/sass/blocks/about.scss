@@ -123,7 +123,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 54px 52px;
   margin: 0;
-  padding: 92px 106px 56px 126px;
+  padding: 92px 106px 57px 126px;
   list-style-type: none;
   background-color: $color-cerulean-blue;
   color: $color-default-white;
@@ -170,6 +170,7 @@
   @include vp-1199 {
     padding: 30px 32px 25px 29px;
     grid-template-columns: 1fr;
+    grid-template-rows: min-content auto;
     gap: 7px;
   }
 

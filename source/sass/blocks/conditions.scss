@@ -71,6 +71,7 @@
 
 .conditions__image-wrapper {
   border-radius: 16px;
+  background-color: $color-columbia-blue;
 }
 
 .conditions__image-wrapper img {
@@ -144,7 +145,7 @@
 
 
     background-color: $color-cerulean-blue;
-    color: var(--White, #FFF);
+    color: var(--White, #ffffff);
     text-align: center;
 
     font-size: 22px;

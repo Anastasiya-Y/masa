@@ -49,13 +49,13 @@
 }
 
 .form__fields-wrapper--modal {
-  margin-bottom: 31px;
+  margin-bottom: 32px;
 
   @include vp-1199 {
-    margin-bottom: 33px;
+    margin-bottom: 34px;
   }
 
-  @include vp-1199 {
+  @include vp-767 {
     gap: 16px;
     margin-bottom: 24px;
   }
@@ -170,7 +170,6 @@
 }
 
 .form__field-wrapper--modal {
-
   label {
     color: rgba($color-charcoal, 0.8);
 
@@ -187,7 +186,6 @@
       font-size: 14px;
       padding-bottom: 9px;
     }
-
   }
 
   input {

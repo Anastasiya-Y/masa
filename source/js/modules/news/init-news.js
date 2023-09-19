@@ -51,6 +51,7 @@ const initSwiperNews = () => {
   });
 };
 const onNewsButtonClick = (evt) => {
+
   if (evt.target.closest('.news__control')) {
     let activeButton = evt.target.closest('.news__control');
 
@@ -113,6 +114,10 @@ const onNewsButtonClick = (evt) => {
 
 const initNews = () => {
   initSwiperNews();
+
+  if (!newsControlsContainer) {
+    return;
+  }
   newsControlsContainer.addEventListener('click', onNewsButtonClick);
 };
 

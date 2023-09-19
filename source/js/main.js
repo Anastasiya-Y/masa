@@ -3,11 +3,12 @@ import {initAccordions} from './modules/accordion/init-accordion';
 import {initNews} from './modules/news/init-news';
 import {initModals} from './modules/modals/init-modals';
 import {initSwiper} from './modules/swiper/init-swiper';
-import {stopSwiper} from './modules/swiper/stop-swiper';
+import {controlSwiper} from './modules/swiper/control-swiper';
 import {createMap} from './modules/map/map';
 import {CustomSelect} from './modules/select/custom-select';
 import {Form} from './modules/form-validate/form';
 import {Burger} from './modules/header/burger';
+import {initAutoResizeTextarea} from './modules/textarea/auto-resize-textarea';
 
 // ---------------------------------
 
@@ -35,7 +36,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initAccordions();
     initNews();
     initSwiper();
-    stopSwiper();
+    controlSwiper();
+    initAutoResizeTextarea();
     createMap();
   });
 });

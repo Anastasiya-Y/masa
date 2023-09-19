@@ -13,14 +13,15 @@
   align-items: start;
 
   grid-template-areas:
-  "logo . nav-list . social"
-  "copyright copyright copyright copyright copyright";
+    "logo . nav-list . social"
+    "copyright copyright copyright copyright copyright";
 
   @include vp-1199 {
     grid-template-columns: 72px 1fr auto auto;
     grid-template-areas:
-    "logo . nav-list nav-list"
-    "copyright copyright copyright social";
+      "logo . nav-list nav-list"
+      "copyright copyright copyright social";
+    row-gap: 23px;
   }
 
   @include vp-767 {
@@ -81,7 +82,7 @@
     grid-area: auto;
     padding: 0;
     justify-content: center;
-    margin: 0 0 15px 0;
+    margin: 0 0 14px 0;
     column-gap: 30px;
     row-gap: 5px;
   }
@@ -102,6 +103,7 @@
 .main-footer__nav-link {
   color: $color-charcoal;
   transition: all $trans-default;
+  user-select: none;
 
   &:hover,
   &:focus {
@@ -158,14 +160,14 @@
   @include vp-1199 {
     display: grid;
     grid-template-columns: auto;
-    gap: 10px;
+    gap: 12px;
     font-size: 12px;
     line-height: 12px;
   }
 
   @include vp-767 {
     grid-area: auto;
-    margin: 0 auto 15px auto;
+    margin: 0 auto 14px auto;
     text-align: center;
     line-height: 14px;
   }
@@ -189,6 +191,7 @@
   text-decoration: underline;
   text-underline-offset: 4px;
   margin-left: 20px;
+  user-select: none;
 
   &:hover,
   &:focus {

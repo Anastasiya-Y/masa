@@ -25,6 +25,8 @@
   height: 100%;
   z-index: 1;
   border-radius: 16px;
+  background-color: $color-bleach-white;
+
 
   @include vp-767 {
     display: none;
