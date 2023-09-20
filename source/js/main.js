@@ -8,7 +8,6 @@ import {createMap} from './modules/map/map';
 import {CustomSelect} from './modules/select/custom-select';
 import {Form} from './modules/form-validate/form';
 import {Burger} from './modules/header/burger';
-import {initAutoResizeTextarea} from './modules/textarea/auto-resize-textarea';
 
 // ---------------------------------
 
@@ -37,7 +36,6 @@ window.addEventListener('DOMContentLoaded', () => {
     initNews();
     initSwiper();
     controlSwiper();
-    initAutoResizeTextarea();
     createMap();
   });
 });

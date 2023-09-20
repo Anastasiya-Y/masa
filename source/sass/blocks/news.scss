@@ -32,15 +32,19 @@
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto 40px auto;
+  gap: 30px;
+  justify-content: flex-start;
 
   @include vp-1199 {
     margin-bottom: 30px;
+    gap: 10px;
   }
 
   @include vp-767 {
     flex-wrap: nowrap;
     margin-bottom: 24px;
     overflow-x: scroll;
+    gap: 12px;
   }
 }
 
@@ -104,18 +108,6 @@
 .news__control--active {
   color: $color-cerulean-blue;
   box-shadow: inset 0 0 0 1px $color-cerulean-blue;
-}
-
-.news__control:not(:last-child) {
-  margin-right: 30px;
-
-  @include vp-1199 {
-    margin-right: 10px;
-  }
-
-  @include vp-767 {
-    margin-right: 12px;
-  }
 }
 
 .news__container {
