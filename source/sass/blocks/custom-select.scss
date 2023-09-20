@@ -261,6 +261,16 @@
 }
 
 .custom-select--modal {
+  margin-bottom: 1px;
+
+  @include vp-1199 {
+    margin-bottom: 4px;
+  }
+
+  @include vp-767 {
+    margin: 0;
+  }
+
   label {
     color: rgba($color-charcoal, 0.8);
     padding-bottom: 8px;
