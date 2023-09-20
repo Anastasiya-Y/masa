@@ -285,6 +285,7 @@
     background-color: $color-default-white;
     border-radius: 0 0 14px 14px;
     position: relative;
+    width: 69.3%;
 
     &::before {
       content: "";
@@ -311,5 +312,10 @@
   @include vp-1199 {
     margin-top: 4px;
     min-width: auto;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    justify-content: space-between;
   }
 }

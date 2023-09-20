@@ -40,8 +40,8 @@ const initSwiperNews = () => {
         },
       },
       1200: {
-        slidesPerView: 3,
-        spaceBetween: 12,
+        slidesPerView: 'auto',
+        spaceBetween: 22,
       },
       1240: {
         slidesPerView: 'auto',
