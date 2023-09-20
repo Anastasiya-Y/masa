@@ -7582,6 +7582,7 @@ button,
 
   .custom-select--modal label {
     font-size: 14px;
+    padding-bottom: 8px;
   }
 
   .custom-select--modal .custom-select__button {
