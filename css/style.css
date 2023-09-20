@@ -7336,7 +7336,7 @@ button,
   }
 
   .programs {
-    padding: 0 0 68px 0;
+    padding: 0 0 67px 0;
   }
 
   .programs__wrapper {
@@ -7371,7 +7371,7 @@ button,
 
   .programs__link {
     width: 70%;
-    padding: 4px 4px 4px 30px;
+    padding: 5px 4px 4px 20px;
   }
 
   .programs__button {
