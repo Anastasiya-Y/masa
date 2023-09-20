@@ -5858,6 +5858,10 @@ button,
   opacity: 1;
 }
 
+.custom-select--modal {
+  margin-bottom: 1px;
+}
+
 .custom-select--modal label {
   color: rgba(72, 72, 72, 0.8);
   padding-bottom: 8px;
@@ -6371,7 +6375,7 @@ button,
   }
 
   .form__fields-wrapper--modal {
-    margin-bottom: 34px;
+    margin-bottom: 30px;
   }
 
   .form__field-wrapper textarea {
@@ -6652,6 +6656,10 @@ button,
 
   .custom-select label {
     padding-bottom: 8px;
+  }
+
+  .custom-select--modal {
+    margin-bottom: 4px;
   }
 
   .social__list {
@@ -7565,6 +7573,10 @@ button,
   }
 
   .custom-select {
+    margin: 0;
+  }
+
+  .custom-select--modal {
     margin: 0;
   }
 
