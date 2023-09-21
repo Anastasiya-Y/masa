@@ -23,7 +23,7 @@
     margin: 0 -15px;
     padding: 0 15px;
     width: 100vw;
-    overflow: auto;
+    overflow-x: auto;
   }
 }
 
@@ -43,7 +43,6 @@
   @include vp-767 {
     flex-wrap: nowrap;
     margin-bottom: 24px;
-    overflow-x: scroll;
     gap: 12px;
   }
 }

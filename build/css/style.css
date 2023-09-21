@@ -7234,14 +7234,13 @@ button,
     margin: 0 -15px;
     padding: 0 15px;
     width: 100vw;
-    overflow: auto;
+    overflow-x: auto;
   }
 
   .news__controls {
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     margin-bottom: 24px;
-    overflow-x: scroll;
     gap: 12px;
   }
 
