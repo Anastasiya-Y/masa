@@ -260,6 +260,10 @@
   .is-open & {
     max-height: calc(100vh - 88px);
     transform: scaleY(1);
+
+    @include vp-767 {
+      max-height: calc(100vh - 78px);
+    }
   }
 }
 
