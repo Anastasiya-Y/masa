@@ -5422,7 +5422,7 @@ button,
 }
 
 .main-header__nav-wrapper {
-  overflow: auto;
+  overflow-y: auto;
   background-color: #316dc2;
   border-radius: 16px;
   max-height: 0;
@@ -5447,7 +5447,6 @@ button,
   margin: 0;
   list-style-type: none;
   padding: 0;
-  overflow: scroll;
   color: rgba(255, 255, 255, 0.7);
   display: -ms-grid;
   display: grid;
@@ -7582,6 +7581,7 @@ button,
 
   .custom-select--modal label {
     font-size: 14px;
+    padding-bottom: 8px;
   }
 
   .custom-select--modal .custom-select__button {

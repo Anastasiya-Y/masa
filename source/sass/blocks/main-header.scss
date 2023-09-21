@@ -248,7 +248,7 @@
 }
 
 .main-header__nav-wrapper {
-  overflow: auto;
+  overflow-y: auto;
   background-color: $color-cerulean-blue;
   border-radius: 16px;
 
@@ -267,7 +267,7 @@
   margin: 0;
   list-style-type: none;
   padding: 0;
-  overflow: scroll;
+  // overflow: scroll;
 
   color: rgba($color-default-white, 0.7);
   display: grid;
